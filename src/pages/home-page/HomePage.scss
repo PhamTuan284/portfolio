@@ -1,0 +1,23 @@
+.home-page {
+  h1 {
+    --letters: 30;
+    --letter-width: 0.6em;
+    --duration: 3s;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+    animation: tape var(--duration) steps(var(--letters)) both infinite;
+    display: inline-flex;
+  }
+
+  span {
+    width: var(--letter-width);
+    flex: none;
+  }
+
+  @keyframes tape {
+    to {
+      width: calc(var(--letters) * var(--letter-width));
+    }
+  }
+}
