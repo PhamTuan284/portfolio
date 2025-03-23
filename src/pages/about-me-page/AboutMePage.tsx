@@ -1,4 +1,9 @@
 import Footer from "../../components/footer/Footer";
+import {
+  BEStacksList,
+  experienceList,
+  FEStacksList,
+} from "../../constants/AboutMePageConstants";
 import "./AboutMePage.scss";
 
 export default function AboutMePage() {
@@ -22,86 +27,12 @@ export default function AboutMePage() {
               <li className="stacks-item d-flex">
                 <h2>FRONTEND</h2>
                 <ul className="stacks-item-list d-flex flex-wrap">
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fjs.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Javascript</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Typescript</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>React</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Next.js </span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fredux.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Redux</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Tailwind CSS</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fsass.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>SASS</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/logo/bootstrap.svg"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Bootstrap</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/logo/bootstrap.svg"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Angular</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/logo/bootstrap.svg"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Zustand</span>
-                  </li>
+                  {FEStacksList.map((item) => (
+                    <li className="stacks-item-list-item mx-5">
+                      <img src={item.imgUrl} alt="JS" className="me-3" />
+                      <span>{item.text}</span>
+                    </li>
+                  ))}
                 </ul>
               </li>
             </ul>
@@ -109,22 +40,12 @@ export default function AboutMePage() {
               <li className="stacks-item d-flex">
                 <h2>BACKEND</h2>
                 <ul className="stacks-item-list d-flex flex-wrap">
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Node.Js</span>
-                  </li>
-                  <li className="stacks-item-list-item mx-5">
-                    <img
-                      src="https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fexpress.png&w=96&q=75"
-                      alt="JS"
-                      className="me-3"
-                    />
-                    <span>Express.js</span>
-                  </li>
+                  {BEStacksList.map((item) => (
+                    <li className="stacks-item-list-item mx-5">
+                      <img src={item.imgUrl} alt="JS" className="me-3" />
+                      <span>{item.text}</span>
+                    </li>
+                  ))}
                 </ul>
               </li>
             </ul>
@@ -132,16 +53,13 @@ export default function AboutMePage() {
           <section className="experience">
             <h1>MY EXPERIENCE</h1>
             <ul className="experience-list">
-              <li className="experience-item">
-                <span>Singapore Airline</span>
-                <h2>Software Engineer {"(Full stack)"}</h2>
-                <span>Dec 2020 - Present</span>
-              </li>
-              <li className="experience-item">
-                <span>Telsoft</span>
-                <h2>Software Engineer {"(Full stack)"}</h2>
-                <span>Dec 2020 - Present</span>
-              </li>
+              {experienceList.map((item) => (
+                <li className="experience-item">
+                  <span>{item.company}</span>
+                  <h2>{item.role}</h2>
+                  <span>{item.time}</span>
+                </li>
+              ))}
             </ul>
           </section>
           <Footer></Footer>
