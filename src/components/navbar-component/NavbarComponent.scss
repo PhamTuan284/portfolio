@@ -1,6 +1,6 @@
 .navbar {
   height: 80px;
-  // position: fixed;
+  position: fixed;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -9,6 +9,7 @@
   mix-blend-mode: difference;
   z-index: 1;
   color: #000000;
+  top: 0;
 
   .burger {
     position: relative;

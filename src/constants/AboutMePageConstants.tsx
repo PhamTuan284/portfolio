@@ -1,5 +1,16 @@
-import jslogo from "../assets/jslogo.webp";
-import typescriptlogo from "../assets/typescriptlogo.svg";
+import jslogo from "../assets/img/jslogo.webp";
+import typescriptlogo from "../assets/img/typescriptlogo.svg";
+import reactlogo from "../assets/img/reactlogo.webp";
+import nextlogo from "../assets/img/nextlogo.webp";
+import reduxlogo from "../assets/img/reduxlogo.webp";
+import zustandlogo from "../assets/img/zustandlogo.png";
+import tailwindlogo from "../assets/img/tailwindlogo.webp";
+import sasslogo from "../assets/img/sasslogo.webp";
+import bootstraplogo from "../assets/img/bootstraplogo.jpg";
+import antdlogo from "../assets/img/antdlogo.png";
+import angularlogo from "../assets/img/angularlogo.png";
+import nodelogo from "../assets/img/nodelogo.webp";
+import expresslogo from "../assets/img/expresslogo.webp";
 
 export const FEStacksList = [
   {
@@ -11,57 +22,50 @@ export const FEStacksList = [
     text: "Typescript",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=96&q=75",
+    imgUrl: reactlogo,
     text: "React",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=96&q=75",
+    imgUrl: nextlogo,
     text: "Next.js",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fredux.png&w=96&q=75",
+    imgUrl: reduxlogo,
     text: "Redux",
   },
   {
-    imgUrl: "https://www.me.toinfinite.dev/logo/bootstrap.svg",
+    imgUrl: zustandlogo,
     text: "Zustand",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=96&q=75",
+    imgUrl: tailwindlogo,
     text: "Tailwind CSS",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fsass.png&w=96&q=75",
+    imgUrl: sasslogo,
     text: "SASS",
   },
   {
-    imgUrl: "https://www.me.toinfinite.dev/logo/bootstrap.svg",
+    imgUrl: bootstraplogo,
     text: "Bootstrap",
   },
   {
-    imgUrl: "https://www.me.toinfinite.dev/logo/bootstrap.svg",
+    imgUrl: antdlogo,
     text: "Ant Design",
   },
   {
-    imgUrl: "https://www.me.toinfinite.dev/logo/bootstrap.svg",
+    imgUrl: angularlogo,
     text: "Angular",
   },
 ];
 
 export const BEStacksList = [
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=96&q=75",
+    imgUrl: nodelogo,
     text: "Node.js",
   },
   {
-    imgUrl:
-      "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fexpress.png&w=96&q=75",
+    imgUrl: expresslogo,
     text: "Express.js",
   },
 ];

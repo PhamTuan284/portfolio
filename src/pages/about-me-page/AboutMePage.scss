@@ -1,9 +1,38 @@
-.stacks-item-list-item {
-  width: 50px;
-}
+.about-me {
+  .header {
+    button {
+      padding: 8px 24px;
+      transition: 0.6s;
+      width: 120px;
+    }
 
-.stacks-item {
-  h2 {
-    margin-right: 20%;
+    button:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transition: 0.6s;
+    }
+  }
+
+  .describe {
+    .describe-name {
+      width: 50%;
+    }
+  }
+
+  .stacks-item-list-item {
+    margin: 0 0 32px 0;
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .stacks-item {
+    h2 {
+      margin-right: 20%;
+    }
   }
 }
