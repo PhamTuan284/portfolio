@@ -1,4 +1,22 @@
 .about-me {
+  scroll-snap-type: y proximity;
+  overflow: auto;
+  height: 100vh;
+
+  /* Hide scrollbar for Edge & Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+
+  /* Hide scrollbar for Chrome & Safari */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  section {
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+  }
+
   .header {
     button {
       padding: 8px 24px;
