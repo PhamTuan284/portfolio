@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, memo } from "react";
 import {
   motion,
   useMotionValue,
@@ -13,7 +13,7 @@ interface MagneticCursorProps {
   stickyElement: React.RefObject<HTMLDivElement>;
 }
 
-export default function MagneticCursor({ stickyElement }: MagneticCursorProps) {
+export default memo(function MagneticCursor({ stickyElement }: MagneticCursorProps) {
   const [isHovered, setIsHovered] = useState(false);
   const cursor = useRef<HTMLDivElement | null>(null);
   const cursorSize = isHovered ? 60 : 15;
@@ -129,4 +129,4 @@ export default function MagneticCursor({ stickyElement }: MagneticCursorProps) {
       ></motion.div>
     </div>
   );
-}
+});

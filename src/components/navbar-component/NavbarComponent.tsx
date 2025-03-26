@@ -1,14 +1,35 @@
 import Navbar from "react-bootstrap/Navbar";
 import "./NavbarComponent.scss";
 import Magnetic from "../magnetic/Magnetic";
-import { forwardRef } from "react";
+import { forwardRef, memo, useMemo } from "react";
 import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 interface NavbarProps {}
 
-const NavbarComponent = forwardRef<HTMLDivElement, NavbarProps>(
-  function NavbarComponent(props, ref) {
+const NavbarComponent = memo(
+  forwardRef<HTMLDivElement, NavbarProps>(function NavbarComponent(props, ref) {
+    const memoizedOffcanvas = useMemo(() => (
+      <Navbar.Offcanvas
+        id={`offcanvasNavbar-expand-false`}
+        aria-labelledby={`offcanvasNavbarLabel-expand-false`}
+        placement="end"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
+            {"</> Tuan"}
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about-me">About me</Nav.Link>
+            <Nav.Link href="/work">My work</Nav.Link>
+          </Nav>
+        </Offcanvas.Body>
+      </Navbar.Offcanvas>
+    ), []);
+
     return (
       <>
         <Navbar expand={false} className="navbar">
@@ -21,29 +42,12 @@ const NavbarComponent = forwardRef<HTMLDivElement, NavbarProps>(
               </Magnetic>
             </Navbar.Toggle>
 
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-false`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-false`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  {"</> Tuan"}
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/about-me">About me</Nav.Link>
-                  <Nav.Link href="/work">My work</Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
+            {memoizedOffcanvas}
           </div>
         </Navbar>
       </>
     );
-  }
+  })
 );
 
 export default NavbarComponent;

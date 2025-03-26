@@ -60,8 +60,8 @@ export default function AboutMePage() {
                 <li className="stacks-item d-flex">
                   <h2>FRONTEND</h2>
                   <ul className="stacks-item-list d-flex flex-wrap">
-                    {FEStacksList.map((item) => (
-                      <li className="stacks-item-list-item mx-5">
+                    {FEStacksList.map((item, index) => (
+                      <li className="stacks-item-list-item mx-5" key={index}>
                         <img src={item.imgUrl} alt="JS" className="me-3" />
                         <span>{item.text}</span>
                       </li>
@@ -73,8 +73,8 @@ export default function AboutMePage() {
                 <li className="stacks-item d-flex">
                   <h2>BACKEND</h2>
                   <ul className="stacks-item-list d-flex flex-wrap">
-                    {BEStacksList.map((item) => (
-                      <li className="stacks-item-list-item mx-5">
+                    {BEStacksList.map((item, index) => (
+                      <li className="stacks-item-list-item mx-5" key={index}>
                         <img src={item.imgUrl} alt="JS" className="me-3 ms-4" />
                         <span>{item.text}</span>
                       </li>
@@ -89,8 +89,8 @@ export default function AboutMePage() {
             <div>
               <h1 className="mb-5">MY EXPERIENCE</h1>
               <ul className="experience-list">
-                {experienceList.map((item) => (
-                  <li className="experience-item mb-5">
+                {experienceList.map((item, index) => (
+                  <li className="experience-item mb-5" key={index}>
                     <span>{item.company}</span>
                     <h2>{item.role}</h2>
                     <span>{item.time}</span>
