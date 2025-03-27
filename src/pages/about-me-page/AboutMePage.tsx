@@ -1,10 +1,11 @@
-import Footer from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
 import {
   BEStacksList,
   experienceList,
   FEStacksList,
 } from "../../constants/AboutMePageConstants";
 import "./AboutMePage.scss";
+import Footer from "../../components/footer/Footer";
 
 export default function AboutMePage() {
   return (
@@ -20,7 +21,13 @@ export default function AboutMePage() {
                 years of experience in building high-performance, scalable, and
                 responsive web solutions.
               </p>
-              <button>MY CV</button>
+              <Link
+                className="cv-button"
+                to="https://drive.google.com/file/d/1ZTlk_Tk_9Ni0KzW3OlxvZBJVGqFN05hK/view?usp=sharing"
+                target="_blank"
+              >
+                MY CV
+              </Link>
             </div>
           </section>
 
@@ -99,8 +106,8 @@ export default function AboutMePage() {
               </ul>
             </div>
           </section>
-          <Footer></Footer>
         </div>
+        <Footer></Footer>
       </div>
     </>
   );

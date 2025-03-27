@@ -4,7 +4,7 @@
   height: 100vh;
 
   /* Hide scrollbar for Edge & Firefox */
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
 
   /* Hide scrollbar for Chrome & Safari */
@@ -18,15 +18,18 @@
   }
 
   .header {
-    button {
+    .cv-button {
       padding: 8px 24px;
       transition: 0.6s;
       width: 120px;
+      text-decoration: none;
+      color: var(--text-color);
+      border: 2px solid var(--text-color);
     }
 
-    button:hover {
-      background-color: #000000;
-      color: #ffffff;
+    .cv-button:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
       transition: 0.6s;
     }
   }

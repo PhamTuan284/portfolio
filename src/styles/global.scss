@@ -1,6 +1,28 @@
 @use "./variable.scss" as *;
 @import "./font-faces.scss";
 
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --navbar-bg: rgba(26, 26, 26, 0.8);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .fade-in-page {
   animation: fade-in 1s;
 }
@@ -25,14 +47,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  line-height: 1.6;
-  font-family: "Roboto Mono", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  // color: rgb(255, 255, 255);
 }
 
 ul,

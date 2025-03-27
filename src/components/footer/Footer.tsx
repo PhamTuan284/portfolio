@@ -3,20 +3,26 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./Footer.scss";
+
 const Footer = memo(function Footer() {
   return (
     <>
       <div className="footer m-auto text-center">
         <p>Contact me</p>
-        <h1>tuanpham22790@gmail.com</h1>
-        <div className="d-flex justify-content-center my-2">
-          <Link to="https://github.com/PhamTuan284" target="blank">
-            <FaGithubSquare size={36} className="me-3" />
+        <h1>
+          <a href="mailto:tuanpham22790@gmail.com" className="email-link">
+            tuanpham22790@gmail.com
+          </a>
+        </h1>
+        <div className="social-links">
+          <Link to="https://github.com/PhamTuan284" target="blank" className="github">
+            <FaGithubSquare size={36} />
           </Link>
-          <Link to="https://www.linkedin.com/in/minh-tuan-pham-694350196/" target="blank">
-            <FaLinkedin size={36} className="me-3" />
+          <Link to="https://www.linkedin.com/in/minh-tuan-pham-694350196/" target="blank" className="linkedin">
+            <FaLinkedin size={36} />
           </Link>
-          <Link to="https://www.facebook.com/TuanTei/" target="blank">
+          <Link to="https://www.facebook.com/TuanTei/" target="blank" className="facebook">
             <FaFacebookSquare size={36} />
           </Link>
         </div>
