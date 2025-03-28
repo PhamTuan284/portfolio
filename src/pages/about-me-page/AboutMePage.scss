@@ -56,4 +56,132 @@
       margin-right: 20%;
     }
   }
+
+  .stacks {
+    .stacks-items {
+      .stacks-item {
+        .stacks-item-list {
+          .stacks-item-list-item {
+            position: relative;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+              transform: translateY(-5px);
+              background-color: rgba(var(--primary-blue), 0.1);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+              img {
+                transform: scale(1.2) rotate(5deg);
+              }
+
+              span {
+                color: var(--primary-blue);
+                transform: translateX(5px);
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: var(--primary-blue);
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+                width: 80%;
+              }
+            }
+
+            img {
+              transition: all 0.3s ease;
+              width: 45px;
+              height: 45px;
+              object-fit: contain;
+            }
+
+            span {
+              transition: all 0.3s ease;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .experience {
+    .experience-list {
+      .experience-item {
+        position: relative;
+        padding: 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateX(20px);
+          background-color: rgba(var(--primary-blue), 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+          span {
+            color: var(--primary-blue);
+          }
+
+          h2 {
+            color: var(--primary-blue);
+            transform: translateX(10px);
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 4px;
+            height: 80%;
+            background-color: var(--primary-blue);
+            transform: translateY(-50%);
+            border-radius: 2px;
+          }
+        }
+
+        span {
+          transition: all 0.3s ease;
+          display: block;
+          margin-bottom: 0.5rem;
+          color: var(--text-color);
+          opacity: 0.8;
+        }
+
+        h2 {
+          transition: all 0.3s ease;
+          margin: 0.5rem 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Add these keyframes if they don't exist
+@keyframes scaleIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
 }

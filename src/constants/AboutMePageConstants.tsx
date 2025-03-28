@@ -2,11 +2,11 @@ import jslogo from "../assets/img/jslogo.webp";
 import typescriptlogo from "../assets/img/typescriptlogo.svg";
 import reactlogo from "../assets/img/reactlogo.webp";
 import nextlogo from "../assets/img/nextlogo.webp";
-import reduxlogo from "../assets/img/reduxlogo.webp";
+import reduxlogo from "../assets/img/reduxlogo.svg";
 import zustandlogo from "../assets/img/zustandlogo.png";
 import tailwindlogo from "../assets/img/tailwindlogo.webp";
-import sasslogo from "../assets/img/sasslogo.webp";
-import bootstraplogo from "../assets/img/bootstraplogo.jpg";
+import sasslogo from "../assets/img/sasslogo.png";
+import bootstraplogo from "../assets/img/bootstraplogo.png";
 import antdlogo from "../assets/img/antdlogo.png";
 import angularlogo from "../assets/img/angularlogo.png";
 import nodelogo from "../assets/img/nodelogo.webp";
@@ -34,10 +34,6 @@ export const FEStacksList = [
     text: "Redux",
   },
   {
-    imgUrl: zustandlogo,
-    text: "Zustand",
-  },
-  {
     imgUrl: tailwindlogo,
     text: "Tailwind CSS",
   },
@@ -56,6 +52,10 @@ export const FEStacksList = [
   {
     imgUrl: angularlogo,
     text: "Angular",
+  },
+  {
+    imgUrl: zustandlogo,
+    text: "Zustand",
   },
 ];
 
