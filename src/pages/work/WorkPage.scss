@@ -1,8 +1,13 @@
 .work-page {
-  padding-top: 100px;
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  padding-top: 100px;
+
+  .container-fluid {
+    height: calc(100vh - 100px);
+    padding: 0;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -11,8 +16,8 @@
 
   .work-layout {
     display: flex;
+    height: 100%;
     gap: 2rem;
-    margin-top: 2rem;
   }
 
   .work-nav {
@@ -20,7 +25,11 @@
     flex-shrink: 0;
     background-color: var(--bg-color);
     border-right: 1px solid var(--text-color);
-    padding-right: 1rem;
+    padding: 2rem 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
     .nav-link {
       color: var(--text-color);
@@ -29,22 +38,71 @@
       margin-bottom: 0.5rem;
       border-radius: 8px;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-blue);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-blue);
+        transition: width 0.3s ease;
+      }
 
       &:hover {
-        background-color: var(--primary-blue);
         color: white;
+        transform: translateX(5px);
+
+        &::before {
+          transform: translateX(0);
+        }
+
+        &::after {
+          width: 100%;
+        }
       }
 
       &.active {
-        background-color: var(--primary-blue);
         color: white;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(var(--primary-blue), 0.2);
+
+        &::before {
+          transform: translateX(0);
+        }
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &:active {
+        transform: translateX(5px) scale(0.98);
       }
     }
   }
 
   .work-content {
     flex-grow: 1;
-    padding: 0 1rem;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 100%;
   }
 
   // Projects Grid
@@ -133,14 +191,14 @@
 
     .work-nav {
       width: 100%;
+      height: auto;
       border-right: none;
       border-bottom: 1px solid var(--text-color);
-      padding-right: 0;
-      padding-bottom: 1rem;
+      padding: 1rem;
     }
 
     .work-content {
-      padding: 1rem 0;
+      padding: 1rem;
     }
   }
 }

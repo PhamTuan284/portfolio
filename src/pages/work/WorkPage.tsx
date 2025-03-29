@@ -11,8 +11,6 @@ export default function WorkPage() {
   return (
     <div className="work-page fade-in-page">
       <div className="container-fluid py-5">
-        <h1 className="text-center mb-5">My Work</h1>
-        
         <TabContainer id="work-tabs" activeKey={activeTab} onSelect={(key) => setActiveTab(key || 'projects')}>
           <div className="work-layout">
             <Nav variant="pills" className="work-nav">
