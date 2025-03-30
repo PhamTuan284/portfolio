@@ -1,0 +1,23 @@
+:root {
+  // Light theme variables
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-color-secondary: #666666;
+  --accent-color: #007bff;
+  --accent-color-light: rgba(0, 123, 255, 0.1);
+  --border-color: #e0e0e0;
+}
+
+// Dark theme variables
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --text-color-secondary: #b3b3b3;
+    --accent-color: #4dabf7;
+    --accent-color-light: rgba(77, 171, 247, 0.1);
+    --border-color: #333333;
+  }
+}
+
+// ... rest of your existing styles ... 

@@ -103,6 +103,33 @@
     padding: 2rem;
     overflow-y: auto;
     height: 100%;
+    position: relative;
+
+    .tab-pane {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      will-change: transform, opacity;
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+        position: relative;
+        pointer-events: auto;
+      }
+    }
+
+    &.animating {
+      .tab-pane {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
   }
 
   // Projects Grid
