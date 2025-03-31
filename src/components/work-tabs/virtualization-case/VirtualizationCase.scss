@@ -1,0 +1,202 @@
+.virtualization-case {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      color: #333333;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border: 1px solid #007bff;
+        background-color: #ffffff;
+        color: #007bff;
+        font-size: 0.875rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        &.active {
+          background-color: #007bff;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .search-container {
+    margin-bottom: 2rem;
+
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+    }
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .users-list {
+      .users-header {
+        color: #333333;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .users-container {
+        height: 600px;
+        overflow-y: auto;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        position: relative;
+
+        .users-inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+        }
+
+        .user-item {
+          padding: 1rem;
+          border-bottom: 1px solid #e0e0e0;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+          }
+
+          &.selected {
+            background-color: rgba(0, 123, 255, 0.1);
+            border-left: 3px solid #007bff;
+          }
+
+          .user-name {
+            color: #333333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+          }
+
+          .user-email {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+          }
+
+          .user-company {
+            color: #666666;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    .user-details {
+      .details-header {
+        color: #333333;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .details-content {
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #ffffff;
+
+        .detail-line {
+          margin-bottom: 1rem;
+
+          .label {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+          }
+
+          .value {
+            color: #333333;
+            font-size: 1rem;
+          }
+        }
+
+        .posts-section {
+          margin-top: 2rem;
+
+          .posts-header {
+            color: #333333;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+          }
+
+          .post-item {
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background-color: #f8f9fa;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .post-title {
+              color: #333333;
+              font-weight: 500;
+              margin-bottom: 0.5rem;
+            }
+
+            .post-body {
+              color: #666666;
+              font-size: 0.875rem;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+}

@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Nav, TabContainer, TabContent, TabPane } from 'react-bootstrap';
-import ProjectsTab from '../../components/work-tabs/ProjectsTab';
-import ExperienceTab from '../../components/work-tabs/ExperienceTab';
-import SkillsTab from '../../components/work-tabs/SkillsTab';
-import PerformanceCase from '../../components/work-tabs/PerformanceCase';
-import './WorkPage.scss';
+import { useState, useEffect } from "react";
+import { Nav, TabContainer, TabContent, TabPane } from "react-bootstrap";
+import PerformanceCase from "../../components/work-tabs/performance-case/PerformanceCase";
+import VirtualizationCase from "../../components/work-tabs/virtualization-case/VirtualizationCase";
+import "./WorkPage.scss";
 
 export default function WorkPage() {
-  const [activeTab, setActiveTab] = useState('projects');
+  const [activeTab, setActiveTab] = useState("performance");
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleTabSelect = (key: string | null) => {
@@ -23,40 +21,32 @@ export default function WorkPage() {
   return (
     <div className="work-page">
       <div className="container-fluid">
-        <TabContainer 
-          id="work-tabs" 
-          activeKey={activeTab} 
+        <TabContainer
+          id="work-tabs"
+          activeKey={activeTab}
           onSelect={handleTabSelect}
           transition={false}
         >
           <div className="work-layout">
             <Nav variant="pills" className="work-nav">
               <Nav.Item>
-                <Nav.Link eventKey="projects">Projects</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="experience">Experience</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="skills">Skills</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
                 <Nav.Link eventKey="performance">Performance Case</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="virtualization">
+                  Virtualization Case
+                </Nav.Link>
               </Nav.Item>
             </Nav>
 
-            <TabContent className={`work-content ${isAnimating ? 'animating' : ''}`}>
-              <TabPane eventKey="projects">
-                <ProjectsTab />
-              </TabPane>
-              <TabPane eventKey="experience">
-                <ExperienceTab />
-              </TabPane>
-              <TabPane eventKey="skills">
-                <SkillsTab />
-              </TabPane>
+            <TabContent
+              className={`work-content ${isAnimating ? "animating" : ""}`}
+            >
               <TabPane eventKey="performance">
                 <PerformanceCase />
+              </TabPane>
+              <TabPane eventKey="virtualization">
+                <VirtualizationCase />
               </TabPane>
             </TabContent>
           </div>

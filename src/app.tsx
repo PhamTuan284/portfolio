@@ -12,7 +12,12 @@ function App() {
         <ReactQueryProvider>
           <>
             <Snow />
-            {useMemo(() => <AppRouter />, [])}
+            {useMemo(
+              () => (
+                <AppRouter />
+              ),
+              []
+            )}
           </>
         </ReactQueryProvider>
       </ThemeProvider>

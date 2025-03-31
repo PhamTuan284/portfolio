@@ -48,8 +48,8 @@ const NavbarComponent = memo(
                 theme === "light" ? "dark" : "light"
               } theme`}
             >
-              <FaSun className="fa-sun"/>
-              <FaMoon className="fa-moon"/>
+              <FaSun className="fa-sun" />
+              <FaMoon className="fa-moon" />
             </div>
             <Navbar.Toggle aria-controls={"offcanvasNavbar-expand-false"}>
               <Magnetic>

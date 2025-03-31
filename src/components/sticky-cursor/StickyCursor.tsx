@@ -7,15 +7,17 @@ import {
   transform,
   animate,
 } from "framer-motion";
-import "./StickyCursor.scss"
+import "./StickyCursor.scss";
 
 interface MagneticCursorProps {
   stickyElement: React.RefObject<HTMLDivElement>;
 }
 
-export default memo(function MagneticCursor({ stickyElement }: MagneticCursorProps) {
+export default memo(function MagneticCursor({
+  stickyElement,
+}: MagneticCursorProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const [hoveredText, setHoveredText] = useState('');
+  const [hoveredText, setHoveredText] = useState("");
   const cursor = useRef<HTMLDivElement | null>(null);
   const cursorSize = isHovered ? 60 : 15;
 
@@ -82,14 +84,14 @@ export default memo(function MagneticCursor({ stickyElement }: MagneticCursorPro
     // Get the text content of the hovered element
     const target = e.target as HTMLElement;
     if (target) {
-      const text = target.textContent || '';
+      const text = target.textContent || "";
       setHoveredText(text.charAt(0).toUpperCase());
     }
   };
 
   const manageMouseLeave = () => {
     setIsHovered(false);
-    setHoveredText('');
+    setHoveredText("");
     if (cursor.current) {
       animate(
         cursor.current,
@@ -132,12 +134,10 @@ export default memo(function MagneticCursor({ stickyElement }: MagneticCursorPro
           width: cursorSize,
           height: cursorSize,
         }}
-        className='cursor'
+        className="cursor"
         ref={cursor}
       >
-        {hoveredText && (
-          <span className="cursor-text">{hoveredText}</span>
-        )}
+        {hoveredText && <span className="cursor-text">{hoveredText}</span>}
       </motion.div>
     </div>
   );

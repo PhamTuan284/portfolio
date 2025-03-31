@@ -1,6 +1,6 @@
-import { memo, useEffect, useRef } from 'react';
-import './Snow.scss';
-import { useTheme } from '../../contexts/theme-provider';
+import { memo, useEffect, useRef } from "react";
+import "./Snow.scss";
+import { useTheme } from "../../contexts/theme-provider";
 
 interface Snowflake {
   x: number;
@@ -20,7 +20,7 @@ const Snow = memo(function Snow() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     // Set canvas size to window size
@@ -29,7 +29,7 @@ const Snow = memo(function Snow() {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     // Create snowflakes
     const createSnowflakes = () => {
@@ -68,7 +68,9 @@ const Snow = memo(function Snow() {
         // Draw snowflake
         ctx.beginPath();
         ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${theme === 'light' ? '0, 0, 0' : '255, 255, 255'}, ${snowflake.opacity})`;
+        ctx.fillStyle = `rgba(${
+          theme === "light" ? "0, 0, 0" : "255, 255, 255"
+        }, ${snowflake.opacity})`;
         ctx.fill();
       });
 
@@ -78,7 +80,7 @@ const Snow = memo(function Snow() {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
@@ -88,4 +90,4 @@ const Snow = memo(function Snow() {
   return <canvas ref={canvasRef} className="snow-canvas" />;
 });
 
-export default Snow; 
+export default Snow;

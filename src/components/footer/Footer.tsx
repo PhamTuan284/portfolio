@@ -16,13 +16,25 @@ const Footer = memo(function Footer() {
           </a>
         </h1>
         <div className="social-links">
-          <Link to="https://github.com/PhamTuan284" target="blank" className="github">
+          <Link
+            to="https://github.com/PhamTuan284"
+            target="blank"
+            className="github"
+          >
             <FaGithubSquare size={36} />
           </Link>
-          <Link to="https://www.linkedin.com/in/minh-tuan-pham-694350196/" target="blank" className="linkedin">
+          <Link
+            to="https://www.linkedin.com/in/minh-tuan-pham-694350196/"
+            target="blank"
+            className="linkedin"
+          >
             <FaLinkedin size={36} />
           </Link>
-          <Link to="https://www.facebook.com/TuanTei/" target="blank" className="facebook">
+          <Link
+            to="https://www.facebook.com/TuanTei/"
+            target="blank"
+            className="facebook"
+          >
             <FaFacebookSquare size={36} />
           </Link>
         </div>

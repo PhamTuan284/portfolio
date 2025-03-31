@@ -1,6 +1,6 @@
-import { JSX } from 'react';
+import { JSX } from "react";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 interface ReactQueryProviderProps {
   children: JSX.Element;
@@ -14,5 +14,7 @@ export function ReactQueryProvider({ children }: ReactQueryProviderProps) {
     },
   });
 
-  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+  return (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  );
 }

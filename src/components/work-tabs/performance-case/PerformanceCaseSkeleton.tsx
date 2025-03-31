@@ -1,4 +1,4 @@
-import './PerformanceCaseSkeleton.scss';
+import "./PerformanceCaseSkeleton.scss";
 
 export default function PerformanceCaseSkeleton() {
   return (
@@ -7,7 +7,7 @@ export default function PerformanceCaseSkeleton() {
         <div className="skeleton-title"></div>
         <div className="skeleton-button"></div>
       </div>
-      
+
       <div className="skeleton-search">
         <div className="skeleton-input"></div>
       </div>
@@ -37,4 +37,4 @@ export default function PerformanceCaseSkeleton() {
       </div>
     </div>
   );
-} 
+}

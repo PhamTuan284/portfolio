@@ -59,11 +59,18 @@
       grid-template-columns: 1fr;
     }
 
-    .skeleton-posts, .skeleton-comments {
-      .skeleton-posts-header, .skeleton-comments-header {
+    .skeleton-posts,
+    .skeleton-comments {
+      .skeleton-posts-header,
+      .skeleton-comments-header {
         width: 150px;
         height: 24px;
-        background: linear-gradient(90deg, #ffffff 25%, #e0e0e0 50%, #ffffff 75%);
+        background: linear-gradient(
+          90deg,
+          #ffffff 25%,
+          #e0e0e0 50%,
+          #ffffff 75%
+        );
         background-size: 1000px 100%;
         animation: shimmer 2s infinite linear;
         margin-bottom: 1rem;
@@ -71,41 +78,60 @@
       }
     }
 
-    .skeleton-post, .skeleton-comment {
+    .skeleton-post,
+    .skeleton-comment {
       padding: 1rem;
       margin-bottom: 1rem;
       border-radius: 8px;
       background: #ffffff;
       border: 1px solid #e0e0e0;
 
-      .skeleton-post-title, .skeleton-comment-title {
+      .skeleton-post-title,
+      .skeleton-comment-title {
         width: 80%;
         height: 20px;
-        background: linear-gradient(90deg, #ffffff 25%, #e0e0e0 50%, #ffffff 75%);
+        background: linear-gradient(
+          90deg,
+          #ffffff 25%,
+          #e0e0e0 50%,
+          #ffffff 75%
+        );
         background-size: 1000px 100%;
         animation: shimmer 2s infinite linear;
         margin-bottom: 0.5rem;
         border-radius: 4px;
       }
 
-      .skeleton-post-body, .skeleton-comment-body {
+      .skeleton-post-body,
+      .skeleton-comment-body {
         width: 100%;
         height: 60px;
-        background: linear-gradient(90deg, #ffffff 25%, #e0e0e0 50%, #ffffff 75%);
+        background: linear-gradient(
+          90deg,
+          #ffffff 25%,
+          #e0e0e0 50%,
+          #ffffff 75%
+        );
         background-size: 1000px 100%;
         animation: shimmer 2s infinite linear;
         margin-bottom: 0.5rem;
         border-radius: 4px;
       }
 
-      .skeleton-post-footer, .skeleton-comment-email {
+      .skeleton-post-footer,
+      .skeleton-comment-email {
         width: 40%;
         height: 16px;
-        background: linear-gradient(90deg, #ffffff 25%, #e0e0e0 50%, #ffffff 75%);
+        background: linear-gradient(
+          90deg,
+          #ffffff 25%,
+          #e0e0e0 50%,
+          #ffffff 75%
+        );
         background-size: 1000px 100%;
         animation: shimmer 2s infinite linear;
         border-radius: 4px;
       }
     }
   }
-} 
+}
