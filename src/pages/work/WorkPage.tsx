@@ -1,60 +1,55 @@
-import { useState, useEffect } from "react";
-import { Nav, TabContainer, TabContent, TabPane } from "react-bootstrap";
-import PerformanceCase from "../../components/work-tabs/performance-case/PerformanceCase";
-import VirtualizationCase from "../../components/work-tabs/virtualization-case/VirtualizationCase";
-import TableCase from "../../components/work-tabs/table-case/TableCase";
-import "./WorkPage.scss";
+import React, { useState } from 'react';
+import { TabContainer, Nav, TabContent, TabPane } from 'react-bootstrap';
+import PerformanceCase from '../../components/work-tabs/performance-case/PerformanceCase';
+import VirtualizationCase from '../../components/work-tabs/virtualization-case/VirtualizationCase';
+import TableCase from '../../components/work-tabs/table-case/TableCase';
+import ImageOptimizationCase from '../../components/work-tabs/image-optimization-case/ImageOptimizationCase';
+import './WorkPage.scss';
 
-export default function WorkPage() {
-  const [activeTab, setActiveTab] = useState("performance");
-  const [isAnimating, setIsAnimating] = useState(false);
+const WorkPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('performance');
 
-  const handleTabSelect = (key: string | null) => {
-    if (key && key !== activeTab) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveTab(key);
-        setIsAnimating(false);
-      }, 300);
+  const handleTabSelect = (tab: string | null) => {
+    if (tab) {
+      setActiveTab(tab);
     }
   };
 
   return (
     <div className="work-page">
-      <div className="container-fluid">
-        <TabContainer
-          id="work-tabs"
-          activeKey={activeTab}
-          onSelect={handleTabSelect}
-          transition={false}
-        >
-          <div className="work-layout">
-            <Nav variant="pills" className="work-nav">
-              <Nav.Item>
-                <Nav.Link eventKey="performance">Performance Case</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="virtualization">Virtualization Case</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="tables">Table Case</Nav.Link>
-              </Nav.Item>
-            </Nav>
+      <TabContainer activeKey={activeTab} onSelect={handleTabSelect}>
+        <Nav variant="tabs" className="work-tabs">
+          <Nav.Item>
+            <Nav.Link eventKey="performance">Performance Case</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="virtualization">Virtualization Case</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="table">Table Case</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="image-optimization">Image Optimization Case</Nav.Link>
+          </Nav.Item>
+        </Nav>
 
-            <TabContent className={`work-content ${isAnimating ? "animating" : ""}`}>
-              <TabPane eventKey="performance">
-                <PerformanceCase />
-              </TabPane>
-              <TabPane eventKey="virtualization">
-                <VirtualizationCase />
-              </TabPane>
-              <TabPane eventKey="tables">
-                <TableCase />
-              </TabPane>
-            </TabContent>
-          </div>
-        </TabContainer>
-      </div>
+        <TabContent className="work-content">
+          <TabPane eventKey="performance">
+            <PerformanceCase />
+          </TabPane>
+          <TabPane eventKey="virtualization">
+            <VirtualizationCase />
+          </TabPane>
+          <TabPane eventKey="table">
+            <TableCase />
+          </TabPane>
+          <TabPane eventKey="image-optimization">
+            <ImageOptimizationCase />
+          </TabPane>
+        </TabContent>
+      </TabContainer>
     </div>
   );
-}
+};
+
+export default WorkPage;
