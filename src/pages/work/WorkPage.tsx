@@ -4,6 +4,7 @@ import PerformanceCase from '../../components/work-tabs/performance-case/Perform
 import VirtualizationCase from '../../components/work-tabs/virtualization-case/VirtualizationCase';
 import TableCase from '../../components/work-tabs/table-case/TableCase';
 import ImageOptimizationCase from '../../components/work-tabs/image-optimization-case/ImageOptimizationCase';
+import LoginCase from '../../components/work-tabs/login-case/LoginCase';
 import './WorkPage.scss';
 
 const WorkPage: React.FC = () => {
@@ -31,6 +32,9 @@ const WorkPage: React.FC = () => {
           <Nav.Item>
             <Nav.Link eventKey="image-optimization">Image Optimization Case</Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="login">Login Case</Nav.Link>
+          </Nav.Item>
         </Nav>
 
         <TabContent className="work-content">
@@ -45,6 +49,9 @@ const WorkPage: React.FC = () => {
           </TabPane>
           <TabPane eventKey="image-optimization">
             <ImageOptimizationCase />
+          </TabPane>
+          <TabPane eventKey="login">
+            <LoginCase />
           </TabPane>
         </TabContent>
       </TabContainer>
