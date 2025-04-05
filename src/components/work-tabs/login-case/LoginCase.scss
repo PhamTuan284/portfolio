@@ -25,25 +25,36 @@
       margin-bottom: 1.5rem;
     }
 
-    .features-list {
-      list-style-type: none;
-      padding: 0;
-      margin-bottom: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+    .auth-tabs {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #dee2e6;
 
-      li {
-        background: #f8f9fa;
-        padding: 0.8rem;
-        border-radius: 4px;
-        text-align: center;
-        color: #2c3e50;
-        font-weight: 500;
+      .nav-link {
+        color: #6c757d;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+        border-radius: 4px 4px 0 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #3498db;
+          background-color: #f8f9fa;
+        }
+
+        &.active {
+          color: #3498db;
+          background-color: transparent;
+          border-bottom: 2px solid #3498db;
+        }
       }
     }
 
-    .login-form {
+    .auth-content {
+      padding: 1rem 0;
+    }
+
+    .auth-form {
       .form-group {
         margin-bottom: 1.5rem;
 
