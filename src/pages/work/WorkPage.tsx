@@ -5,6 +5,7 @@ import VirtualizationCase from '../../components/work-tabs/virtualization-case/V
 import TableCase from '../../components/work-tabs/table-case/TableCase';
 import ImageOptimizationCase from '../../components/work-tabs/image-optimization-case/ImageOptimizationCase';
 import LoginCase from '../../components/work-tabs/login-case/LoginCase';
+import AnimationCase from '../../components/work-tabs/animation-case/AnimationCase';
 import './WorkPage.scss';
 
 const WorkPage: React.FC = () => {
@@ -35,6 +36,9 @@ const WorkPage: React.FC = () => {
           <Nav.Item>
             <Nav.Link eventKey="login">Login Case</Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="animation">Animation Case</Nav.Link>
+          </Nav.Item>
         </Nav>
 
         <TabContent className="work-content">
@@ -52,6 +56,9 @@ const WorkPage: React.FC = () => {
           </TabPane>
           <TabPane eventKey="login">
             <LoginCase />
+          </TabPane>
+          <TabPane eventKey="animation">
+            <AnimationCase />
           </TabPane>
         </TabContent>
       </TabContainer>

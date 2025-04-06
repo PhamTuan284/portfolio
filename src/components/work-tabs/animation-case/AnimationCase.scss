@@ -1,0 +1,136 @@
+.animation-case {
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 2rem;
+  }
+
+  .animation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .animation-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h3 {
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #34495e;
+      margin-bottom: 1rem;
+    }
+
+    .animation-demo {
+      height: 150px;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f9fa;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .animation-content {
+        width: 100px;
+        height: 100px;
+        background: #3498db;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+    }
+
+    .animation-button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  // Animation Classes
+  .fade-animation {
+    &.active .animation-content {
+      animation: fade 2s infinite;
+    }
+  }
+
+  .slide-animation {
+    &.active .animation-content {
+      animation: slide 2s infinite;
+    }
+  }
+
+  .bounce-animation {
+    &.active .animation-content {
+      animation: bounce 2s infinite;
+    }
+  }
+
+  .rotate-animation {
+    &.active .animation-content {
+      animation: rotate 2s infinite;
+    }
+  }
+
+  .scale-animation {
+    &.active .animation-content {
+      animation: scale 2s infinite;
+    }
+  }
+
+  .flip-animation {
+    &.active .animation-content {
+      animation: flip 2s infinite;
+    }
+  }
+
+  // Keyframes
+  @keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+  }
+
+  @keyframes flip {
+    0% { transform: perspective(400px) rotateY(0); }
+    50% { transform: perspective(400px) rotateY(180deg); }
+    100% { transform: perspective(400px) rotateY(360deg); }
+  }
+} 
