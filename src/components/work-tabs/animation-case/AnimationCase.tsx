@@ -41,6 +41,30 @@ const AnimationCase: React.FC = () => {
       title: 'Flip Animation',
       description: '3D flip card effect',
       className: 'flip-animation'
+    },
+    {
+      id: 'pulse',
+      title: 'Pulse Animation',
+      description: 'Heartbeat-like pulsing effect',
+      className: 'pulse-animation'
+    },
+    {
+      id: 'shake',
+      title: 'Shake Animation',
+      description: 'Vibrating shake effect',
+      className: 'shake-animation'
+    },
+    {
+      id: 'wave',
+      title: 'Wave Animation',
+      description: 'Wavy motion effect',
+      className: 'wave-animation'
+    },
+    {
+      id: 'float',
+      title: 'Float Animation',
+      description: 'Gentle floating up and down',
+      className: 'float-animation'
     }
   ];
 
