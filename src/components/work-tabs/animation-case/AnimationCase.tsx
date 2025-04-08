@@ -65,6 +65,18 @@ const AnimationCase: React.FC = () => {
       title: 'Float Animation',
       description: 'Gentle floating up and down',
       className: 'float-animation'
+    },
+    {
+      id: 'swing',
+      title: 'Swing Animation',
+      description: 'Pendulum-like swinging motion',
+      className: 'swing-animation'
+    },
+    {
+      id: 'rainbow',
+      title: 'Rainbow Animation',
+      description: 'Color transition through rainbow colors',
+      className: 'rainbow-animation'
     }
   ];
 

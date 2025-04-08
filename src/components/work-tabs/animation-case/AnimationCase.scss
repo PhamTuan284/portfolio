@@ -126,6 +126,19 @@
     }
   }
 
+  .swing-animation {
+    &.active .animation-content {
+      transform-origin: top center;
+      animation: swing 2s infinite;
+    }
+  }
+
+  .rainbow-animation {
+    &.active .animation-content {
+      animation: rainbow 3s infinite;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%, 100% { opacity: 1; }
@@ -178,5 +191,21 @@
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+  }
+
+  @keyframes swing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+  }
+
+  @keyframes rainbow {
+    0% { background-color: #ff0000; }
+    16.666% { background-color: #ff7f00; }
+    33.333% { background-color: #ffff00; }
+    50% { background-color: #00ff00; }
+    66.666% { background-color: #0000ff; }
+    83.333% { background-color: #4b0082; }
+    100% { background-color: #ff0000; }
   }
 } 
