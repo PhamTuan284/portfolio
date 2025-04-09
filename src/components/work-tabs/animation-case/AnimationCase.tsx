@@ -77,6 +77,24 @@ const AnimationCase: React.FC = () => {
       title: 'Rainbow Animation',
       description: 'Color transition through rainbow colors',
       className: 'rainbow-animation'
+    },
+    {
+      id: 'glow',
+      title: 'Glow Animation',
+      description: 'Pulsing glow effect with shadow',
+      className: 'glow-animation'
+    },
+    {
+      id: 'skew',
+      title: 'Skew Animation',
+      description: 'Diagonal distortion effect',
+      className: 'skew-animation'
+    },
+    {
+      id: 'tilt',
+      title: '3D Tilt Animation',
+      description: 'Interactive 3D tilt effect',
+      className: 'tilt-animation'
     }
   ];
 
