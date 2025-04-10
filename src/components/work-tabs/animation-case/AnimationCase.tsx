@@ -110,6 +110,24 @@ const AnimationCase: React.FC = () => {
       title: 'Jelly Effect',
       description: 'Squishy, elastic deformation effect',
       className: 'jelly-animation'
+    },
+    {
+      id: 'pop',
+      title: 'Pop Effect',
+      description: 'Quick scale and fade animation',
+      className: 'pop-animation'
+    },
+    {
+      id: 'squeeze',
+      title: 'Squeeze Effect',
+      description: 'Horizontal compression effect',
+      className: 'squeeze-animation'
+    },
+    {
+      id: 'twist',
+      title: 'Twist Effect',
+      description: 'Rotating scale transformation',
+      className: 'twist-animation'
     }
   ];
 

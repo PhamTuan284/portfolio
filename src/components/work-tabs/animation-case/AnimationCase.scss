@@ -187,6 +187,27 @@
     }
   }
 
+  .pop-animation {
+    &:hover .animation-content {
+      animation: pop 1.5s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .squeeze-animation {
+    &:hover .animation-content {
+      animation: squeeze 2s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .twist-animation {
+    &:hover .animation-content {
+      animation: twist 2s infinite;
+      transform-origin: center;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%, 100% { opacity: 1; }
@@ -344,6 +365,55 @@
     75% {
       transform: scale(1.1, 0.9);
       border-radius: 6px;
+    }
+  }
+
+  @keyframes pop {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.3);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(0.8);
+      opacity: 0.9;
+    }
+    75% {
+      transform: scale(1.1);
+      opacity: 0.95;
+    }
+  }
+
+  @keyframes squeeze {
+    0%, 100% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scaleX(0.5);
+    }
+    50% {
+      transform: scaleX(1.2);
+    }
+    75% {
+      transform: scaleX(0.8);
+    }
+  }
+
+  @keyframes twist {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1.2);
+    }
+    50% {
+      transform: rotate(180deg) scale(0.8);
+    }
+    75% {
+      transform: rotate(270deg) scale(1.1);
     }
   }
 } 
