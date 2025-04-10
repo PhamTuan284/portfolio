@@ -26,6 +26,12 @@
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
 
     h3 {
       color: #3498db;
@@ -56,6 +62,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 4px;
+        transition: all 0.3s ease;
       }
     }
 
@@ -67,95 +74,116 @@
 
   // Animation Classes
   .fade-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: fade 2s infinite;
     }
   }
 
   .slide-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: slide 2s infinite;
     }
   }
 
   .bounce-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: bounce 2s infinite;
     }
   }
 
   .rotate-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: rotate 2s infinite;
     }
   }
 
   .scale-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: scale 2s infinite;
     }
   }
 
   .flip-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: flip 2s infinite;
     }
   }
 
   .pulse-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: pulse 2s infinite;
     }
   }
 
   .shake-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: shake 0.5s infinite;
     }
   }
 
   .wave-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: wave 2s infinite;
     }
   }
 
   .float-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: float 3s infinite;
     }
   }
 
   .swing-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       transform-origin: top center;
       animation: swing 2s infinite;
     }
   }
 
   .rainbow-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: rainbow 3s infinite;
     }
   }
 
   .glow-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: glow 2s infinite;
       box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
     }
   }
 
   .skew-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       animation: skew 2s infinite;
     }
   }
 
   .tilt-animation {
-    &.active .animation-content {
+    &:hover .animation-content {
       transform-style: preserve-3d;
       animation: tilt 3s infinite;
+    }
+  }
+
+  .squash-stretch-animation {
+    &:hover .animation-content {
+      animation: squash-stretch 2s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .wobble-animation {
+    &:hover .animation-content {
+      animation: wobble 2s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .jelly-animation {
+    &:hover .animation-content {
+      animation: jelly 2s infinite;
+      transform-origin: center;
     }
   }
 
@@ -258,6 +286,64 @@
     }
     75% { 
       transform: perspective(1000px) rotateX(20deg) rotateY(-20deg);
+    }
+  }
+
+  @keyframes squash-stretch {
+    0%, 100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1.2, 0.8);
+    }
+    50% {
+      transform: scale(0.8, 1.2);
+    }
+    75% {
+      transform: scale(1.1, 0.9);
+    }
+  }
+
+  @keyframes wobble {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    15% {
+      transform: rotate(5deg) scale(1.1);
+    }
+    30% {
+      transform: rotate(-5deg) scale(1.1);
+    }
+    45% {
+      transform: rotate(3deg) scale(1.05);
+    }
+    60% {
+      transform: rotate(-3deg) scale(1.05);
+    }
+    75% {
+      transform: rotate(2deg) scale(1.02);
+    }
+    90% {
+      transform: rotate(-2deg) scale(1.02);
+    }
+  }
+
+  @keyframes jelly {
+    0%, 100% {
+      transform: scale(1, 1);
+      border-radius: 4px;
+    }
+    25% {
+      transform: scale(1.2, 0.8);
+      border-radius: 8px;
+    }
+    50% {
+      transform: scale(0.8, 1.2);
+      border-radius: 12px;
+    }
+    75% {
+      transform: scale(1.1, 0.9);
+      border-radius: 6px;
     }
   }
 } 

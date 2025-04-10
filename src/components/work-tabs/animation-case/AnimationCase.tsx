@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import React from 'react';
 import './AnimationCase.scss';
 
 const AnimationCase: React.FC = () => {
-  const [activeAnimation, setActiveAnimation] = useState<string | null>(null);
-
   const animations = [
     {
       id: 'fade',
@@ -95,6 +92,24 @@ const AnimationCase: React.FC = () => {
       title: '3D Tilt Animation',
       description: 'Interactive 3D tilt effect',
       className: 'tilt-animation'
+    },
+    {
+      id: 'squash-stretch',
+      title: 'Squash & Stretch',
+      description: 'Classic animation principle with elastic effect',
+      className: 'squash-stretch-animation'
+    },
+    {
+      id: 'wobble',
+      title: 'Wobble Effect',
+      description: 'Playful wobbling motion with rotation',
+      className: 'wobble-animation'
+    },
+    {
+      id: 'jelly',
+      title: 'Jelly Effect',
+      description: 'Squishy, elastic deformation effect',
+      className: 'jelly-animation'
     }
   ];
 
@@ -102,7 +117,7 @@ const AnimationCase: React.FC = () => {
     <div className="animation-case">
       <h2>Animation Examples</h2>
       <p className="description">
-        Click on the buttons below to see different animation effects
+        Hover over the cards to see different animation effects
       </p>
 
       <div className="animation-grid">
@@ -110,18 +125,11 @@ const AnimationCase: React.FC = () => {
           <div key={animation.id} className="animation-card">
             <h3>{animation.title}</h3>
             <p>{animation.description}</p>
-            <div className={`animation-demo ${animation.className} ${activeAnimation === animation.id ? 'active' : ''}`}>
+            <div className={`animation-demo ${animation.className}`}>
               <div className="animation-content">
                 Demo
               </div>
             </div>
-            <Button
-              variant="primary"
-              onClick={() => setActiveAnimation(activeAnimation === animation.id ? null : animation.id)}
-              className="animation-button"
-            >
-              {activeAnimation === animation.id ? 'Stop' : 'Play'} Animation
-            </Button>
           </div>
         ))}
       </div>
