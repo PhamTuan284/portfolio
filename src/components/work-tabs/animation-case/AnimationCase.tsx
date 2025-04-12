@@ -128,6 +128,24 @@ const AnimationCase: React.FC = () => {
       title: 'Twist Effect',
       description: 'Rotating scale transformation',
       className: 'twist-animation'
+    },
+    {
+      id: 'morph',
+      title: 'Morph Effect',
+      description: 'Shape-changing transformation',
+      className: 'morph-animation'
+    },
+    {
+      id: 'bounce-physics',
+      title: 'Physics Bounce',
+      description: 'Realistic bouncing with gravity',
+      className: 'bounce-physics-animation'
+    },
+    {
+      id: 'pulse-color',
+      title: 'Color Pulse',
+      description: 'Pulsing effect with color transitions',
+      className: 'pulse-color-animation'
     }
   ];
 

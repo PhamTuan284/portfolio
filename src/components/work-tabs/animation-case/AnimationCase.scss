@@ -208,6 +208,26 @@
     }
   }
 
+  .morph-animation {
+    &:hover .animation-content {
+      animation: morph 3s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .bounce-physics-animation {
+    &:hover .animation-content {
+      animation: bounce-physics 2s infinite;
+      transform-origin: bottom center;
+    }
+  }
+
+  .pulse-color-animation {
+    &:hover .animation-content {
+      animation: pulse-color 2s infinite;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%, 100% { opacity: 1; }
@@ -414,6 +434,79 @@
     }
     75% {
       transform: rotate(270deg) scale(1.1);
+    }
+  }
+
+  @keyframes morph {
+    0%, 100% {
+      transform: scale(1);
+      border-radius: 4px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    25% {
+      transform: scale(1.1);
+      border-radius: 50%;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    50% {
+      transform: scale(0.9);
+      border-radius: 0;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    75% {
+      transform: scale(1.05);
+      border-radius: 20px;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    }
+  }
+
+  @keyframes bounce-physics {
+    0%, 100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(-30px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    60% {
+      transform: translateY(-10px);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    70% {
+      transform: translateY(-20px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    80% {
+      transform: translateY(-5px);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    90% {
+      transform: translateY(-10px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes pulse-color {
+    0%, 100% {
+      transform: scale(1);
+      background-color: #3498db;
+      box-shadow: 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    25% {
+      transform: scale(1.1);
+      background-color: #e74c3c;
+      box-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+    }
+    50% {
+      transform: scale(1);
+      background-color: #2ecc71;
+      box-shadow: 0 0 0 rgba(46, 204, 113, 0.4);
+    }
+    75% {
+      transform: scale(1.1);
+      background-color: #f1c40f;
+      box-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
     }
   }
 } 
