@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AnimationCase.scss';
 
 const AnimationCase: React.FC = () => {
-  const animations = [
+  const [visibleAnimations, setVisibleAnimations] = useState(6);
+  const [isLoading, setIsLoading] = useState(false);
+  const observerTarget = useRef<HTMLDivElement>(null);
+
+  const allAnimations = [
     {
       id: 'fade',
       title: 'Fade Animation',
@@ -149,6 +153,34 @@ const AnimationCase: React.FC = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isLoading && visibleAnimations < allAnimations.length) {
+          setIsLoading(true);
+          // Simulate loading delay
+          setTimeout(() => {
+            setVisibleAnimations((prev) => Math.min(prev + 6, allAnimations.length));
+            setIsLoading(false);
+          }, 500);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => {
+      if (observerTarget.current) {
+        observer.unobserve(observerTarget.current);
+      }
+    };
+  }, [visibleAnimations, isLoading, allAnimations.length]);
+
+  const displayedAnimations = allAnimations.slice(0, visibleAnimations);
+
   return (
     <div className="animation-case">
       <h2>Animation Examples</h2>
@@ -157,7 +189,7 @@ const AnimationCase: React.FC = () => {
       </p>
 
       <div className="animation-grid">
-        {animations.map(animation => (
+        {displayedAnimations.map(animation => (
           <div key={animation.id} className="animation-card">
             <h3>{animation.title}</h3>
             <p>{animation.description}</p>
@@ -169,6 +201,12 @@ const AnimationCase: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {visibleAnimations < allAnimations.length && (
+        <div ref={observerTarget} className="loading-indicator">
+          {isLoading ? 'Loading more animations...' : ''}
+        </div>
+      )}
     </div>
   );
 };
