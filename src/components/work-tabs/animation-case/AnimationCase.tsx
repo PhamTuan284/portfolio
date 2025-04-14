@@ -150,6 +150,24 @@ const AnimationCase: React.FC = () => {
       title: 'Color Pulse',
       description: 'Pulsing effect with color transitions',
       className: 'pulse-color-animation'
+    },
+    {
+      id: 'ripple',
+      title: 'Ripple Effect',
+      description: 'Expanding circular wave effect',
+      className: 'ripple-animation'
+    },
+    {
+      id: 'blur',
+      title: 'Blur Effect',
+      description: 'Dynamic focus and blur transitions',
+      className: 'blur-animation'
+    },
+    {
+      id: 'spin-3d',
+      title: '3D Spin',
+      description: 'Three-dimensional rotation effect',
+      className: 'spin-3d-animation'
     }
   ];
 
