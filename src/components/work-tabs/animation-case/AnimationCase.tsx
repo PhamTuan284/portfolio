@@ -168,6 +168,24 @@ const AnimationCase: React.FC = () => {
       title: '3D Spin',
       description: 'Three-dimensional rotation effect',
       className: 'spin-3d-animation'
+    },
+    {
+      id: 'glitch',
+      title: 'Glitch Effect',
+      description: 'Digital distortion and glitch effect',
+      className: 'glitch-animation'
+    },
+    {
+      id: 'float-3d',
+      title: '3D Float',
+      description: 'Floating effect with 3D parallax',
+      className: 'float-3d-animation'
+    },
+    {
+      id: 'morph-svg',
+      title: 'SVG Morph',
+      description: 'Smooth shape morphing with SVG paths',
+      className: 'morph-svg-animation'
     }
   ];
 
