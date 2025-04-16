@@ -186,6 +186,24 @@ const AnimationCase: React.FC = () => {
       title: 'SVG Morph',
       description: 'Smooth shape morphing with SVG paths',
       className: 'morph-svg-animation'
+    },
+    {
+      id: 'neon-glow',
+      title: 'Neon Glow',
+      description: 'Electric neon sign effect with pulsing glow',
+      className: 'neon-glow-animation'
+    },
+    {
+      id: 'matrix-rain',
+      title: 'Matrix Rain',
+      description: 'Digital rain effect inspired by The Matrix',
+      className: 'matrix-rain-animation'
+    },
+    {
+      id: 'hologram',
+      title: 'Hologram',
+      description: 'Futuristic holographic display effect',
+      className: 'hologram-animation'
     }
   ];
 
