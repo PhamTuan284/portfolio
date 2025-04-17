@@ -431,6 +431,95 @@
     }
   }
 
+  .fire-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #ff4500, #ff8c00);
+      animation: fire-flicker 0.2s infinite;
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 255, 0, 0.8) 0%, rgba(255, 69, 0, 0.4) 50%, transparent 100%);
+      animation: fire-glow 1s infinite;
+    }
+
+    &::after {
+      animation-delay: 0.5s;
+      opacity: 0.5;
+    }
+  }
+
+  .galaxy-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #000428, #004e92);
+      animation: galaxy-rotate 20s infinite linear;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 2%);
+      animation: stars-twinkle 4s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+      animation: nebula-pulse 8s infinite;
+    }
+  }
+
+  .circuit-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: #000;
+      animation: circuit-pulse 2s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(90deg, transparent 0%, #00ff00 50%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, #00ff00 50%, transparent 100%);
+      background-size: 20px 20px;
+      opacity: 0.1;
+      animation: circuit-grid 4s infinite linear;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 0%, rgba(0, 255, 0, 0.2) 50%, transparent 100%);
+      animation: circuit-flow 2s infinite linear;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1061,6 +1150,48 @@
       transform: translateY(100%);
       opacity: 0;
     }
+  }
+
+  @keyframes fire-flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(1deg); }
+    50% { transform: scale(0.98) rotate(-1deg); }
+    75% { transform: scale(1.01) rotate(0.5deg); }
+  }
+
+  @keyframes fire-glow {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  @keyframes galaxy-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes stars-twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes nebula-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.2); opacity: 0.4; }
+  }
+
+  @keyframes circuit-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); }
+  }
+
+  @keyframes circuit-grid {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+  }
+
+  @keyframes circuit-flow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
   }
 
   @keyframes fadeIn {

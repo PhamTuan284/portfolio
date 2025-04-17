@@ -204,6 +204,24 @@ const AnimationCase: React.FC = () => {
       title: 'Hologram',
       description: 'Futuristic holographic display effect',
       className: 'hologram-animation'
+    },
+    {
+      id: 'fire',
+      title: 'Fire Effect',
+      description: 'Realistic flame animation with glowing embers',
+      className: 'fire-animation'
+    },
+    {
+      id: 'galaxy',
+      title: 'Galaxy Effect',
+      description: 'Cosmic space animation with twinkling stars',
+      className: 'galaxy-animation'
+    },
+    {
+      id: 'circuit',
+      title: 'Circuit Effect',
+      description: 'Animated circuit board with flowing electricity',
+      className: 'circuit-animation'
     }
   ];
 
