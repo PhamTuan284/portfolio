@@ -222,6 +222,24 @@ const AnimationCase: React.FC = () => {
       title: 'Circuit Effect',
       description: 'Animated circuit board with flowing electricity',
       className: 'circuit-animation'
+    },
+    {
+      id: 'water',
+      title: 'Water Effect',
+      description: 'Realistic water surface with ripples and reflections',
+      className: 'water-animation'
+    },
+    {
+      id: 'lightning',
+      title: 'Lightning Effect',
+      description: 'Electric discharge with crackling energy',
+      className: 'lightning-animation'
+    },
+    {
+      id: 'portal',
+      title: 'Portal Effect',
+      description: 'Swirling vortex with dimensional distortion',
+      className: 'portal-animation'
     }
   ];
 

@@ -520,6 +520,104 @@
     }
   }
 
+  .water-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #1e90ff, #00bfff);
+      animation: water-ripple 2s infinite;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 50%);
+      animation: water-reflect 4s infinite;
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+      animation: water-wave 2s infinite;
+    }
+  }
+
+  .lightning-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: #000;
+      animation: lightning-strike 0.5s infinite;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 0%, #fff 50%, transparent 100%);
+      opacity: 0;
+    }
+
+    &::before {
+      animation: lightning-bolt 1s infinite;
+    }
+
+    &::after {
+      animation: lightning-bolt 1s infinite 0.5s;
+    }
+  }
+
+  .portal-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: radial-gradient(circle at center, #8a2be2, #4b0082);
+      animation: portal-spin 4s infinite linear;
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 100%
+      );
+      animation: portal-ring 2s infinite linear;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+      animation: portal-pulse 2s infinite;
+      border-radius: 50%;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1192,6 +1290,51 @@
   @keyframes circuit-flow {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+  }
+
+  @keyframes water-ripple {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
+  @keyframes water-reflect {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(10px, 10px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+  }
+
+  @keyframes water-wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes lightning-strike {
+    0%, 100% { background: #000; }
+    10% { background: #fff; }
+    20% { background: #000; }
+    30% { background: #fff; }
+    40% { background: #000; }
+  }
+
+  @keyframes lightning-bolt {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes portal-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes portal-ring {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes portal-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
   }
 
   @keyframes fadeIn {
