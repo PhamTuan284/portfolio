@@ -240,6 +240,24 @@ const AnimationCase: React.FC = () => {
       title: 'Portal Effect',
       description: 'Swirling vortex with dimensional distortion',
       className: 'portal-animation'
+    },
+    {
+      id: 'crystal',
+      title: 'Crystal Effect',
+      description: 'Prismatic light refraction with sparkling facets',
+      className: 'crystal-animation'
+    },
+    {
+      id: 'smoke',
+      title: 'Smoke Effect',
+      description: 'Swirling smoke particles with dynamic movement',
+      className: 'smoke-animation'
+    },
+    {
+      id: 'lava',
+      title: 'Lava Effect',
+      description: 'Molten rock with bubbling and flowing animation',
+      className: 'lava-animation'
     }
   ];
 

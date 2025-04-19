@@ -618,6 +618,91 @@
     }
   }
 
+  .crystal-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #ff69b4, #87ceeb, #98fb98);
+      animation: crystal-sparkle 2s infinite;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+      animation: crystal-light 3s infinite;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+      animation: crystal-glow 2s infinite;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+  }
+
+  .smoke-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #2c3e50, #34495e);
+      animation: smoke-drift 4s infinite;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: smoke-particle 3s infinite;
+    }
+
+    &::after {
+      animation-delay: 1.5s;
+      opacity: 0.5;
+    }
+  }
+
+  .lava-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #ff4500, #ff8c00, #ff4500);
+      animation: lava-flow 3s infinite;
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 0, 0.8) 0%, transparent 50%);
+      animation: lava-bubble 2s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+      animation: lava-glow 1.5s infinite;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1346,5 +1431,51 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes crystal-sparkle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.1); }
+  }
+
+  @keyframes crystal-light {
+    0%, 100% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(180deg) translateX(20px); }
+  }
+
+  @keyframes crystal-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  @keyframes smoke-drift {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  @keyframes smoke-particle {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(20px, -20px) scale(1.2); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  }
+
+  @keyframes lava-flow {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+  }
+
+  @keyframes lava-bubble {
+    0%, 100% { transform: scale(1) translate(0, 0); }
+    25% { transform: scale(1.2) translate(10px, -10px); }
+    50% { transform: scale(1) translate(0, 0); }
+    75% { transform: scale(1.1) translate(-10px, 10px); }
+  }
+
+  @keyframes lava-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
   }
 }
