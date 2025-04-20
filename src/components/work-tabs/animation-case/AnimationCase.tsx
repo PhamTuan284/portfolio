@@ -258,6 +258,24 @@ const AnimationCase: React.FC = () => {
       title: 'Lava Effect',
       description: 'Molten rock with bubbling and flowing animation',
       className: 'lava-animation'
+    },
+    {
+      id: 'rainbow',
+      title: 'Rainbow Effect',
+      description: 'Vibrant color spectrum with flowing gradients',
+      className: 'rainbow-animation'
+    },
+    {
+      id: 'aurora',
+      title: 'Aurora Effect',
+      description: 'Northern lights with ethereal color waves',
+      className: 'aurora-animation'
+    },
+    {
+      id: 'storm',
+      title: 'Storm Effect',
+      description: 'Dynamic weather with lightning and rain',
+      className: 'storm-animation'
     }
   ];
 

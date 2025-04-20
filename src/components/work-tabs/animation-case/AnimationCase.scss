@@ -163,8 +163,41 @@
   }
 
   .rainbow-animation {
+    position: relative;
+    overflow: hidden;
+
     &:hover .animation-content {
-      animation: rainbow 3s infinite;
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8b00ff
+      );
+      background-size: 400% 400%;
+      animation: rainbow-flow 3s infinite;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+      animation: rainbow-sparkle 2s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+      animation: rainbow-glow 1.5s infinite;
     }
   }
 
@@ -703,6 +736,71 @@
     }
   }
 
+  .aurora-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(
+        45deg,
+        rgba(0, 255, 255, 0.1),
+        rgba(0, 255, 0, 0.1),
+        rgba(255, 0, 255, 0.1)
+      );
+      animation: aurora-wave 8s infinite;
+      backdrop-filter: blur(2px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        linear-gradient(45deg, transparent 0%, rgba(0, 255, 255, 0.2) 50%, transparent 100%),
+        linear-gradient(-45deg, transparent 0%, rgba(0, 255, 0, 0.2) 50%, transparent 100%);
+      animation: aurora-flow 6s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: aurora-pulse 4s infinite;
+    }
+  }
+
+  .storm-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #1a1a1a, #333333);
+      animation: storm-cloud 4s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+      animation: rain-fall 0.5s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 0%, #fff 50%, transparent 100%);
+      animation: lightning 2s infinite;
+      opacity: 0;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -831,28 +929,56 @@
     }
   }
 
-  @keyframes rainbow {
-    0% {
-      background-color: #ff0000;
-    }
-    16.666% {
-      background-color: #ff7f00;
-    }
-    33.333% {
-      background-color: #ffff00;
-    }
-    50% {
-      background-color: #00ff00;
-    }
-    66.666% {
-      background-color: #0000ff;
-    }
-    83.333% {
-      background-color: #4b0082;
-    }
-    100% {
-      background-color: #ff0000;
-    }
+  @keyframes rainbow-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes rainbow-sparkle {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 0.8; }
+  }
+
+  @keyframes rainbow-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes aurora-wave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(-5deg); }
+  }
+
+  @keyframes aurora-flow {
+    0% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(50px) scale(1.2); }
+    100% { transform: translateX(0) scale(1); }
+  }
+
+  @keyframes aurora-pulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+  }
+
+  @keyframes storm-cloud {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.05); }
+  }
+
+  @keyframes rain-fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  @keyframes lightning {
+    0%, 100% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
   }
 
   @keyframes glow {
@@ -1477,5 +1603,57 @@
   @keyframes lava-glow {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 0.7; }
+  }
+
+  @keyframes rainbow-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes rainbow-sparkle {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 0.8; }
+  }
+
+  @keyframes rainbow-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes aurora-wave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(-5deg); }
+  }
+
+  @keyframes aurora-flow {
+    0% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(50px) scale(1.2); }
+    100% { transform: translateX(0) scale(1); }
+  }
+
+  @keyframes aurora-pulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+  }
+
+  @keyframes storm-cloud {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.05); }
+  }
+
+  @keyframes rain-fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  @keyframes lightning {
+    0%, 100% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
   }
 }
