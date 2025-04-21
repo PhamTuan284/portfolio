@@ -801,6 +801,100 @@
     }
   }
 
+  .nebula-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: radial-gradient(
+        circle at center,
+        rgba(138, 43, 226, 0.2),
+        rgba(75, 0, 130, 0.2),
+        rgba(0, 0, 0, 0.2)
+      );
+      animation: nebula-swirl 10s infinite;
+      backdrop-filter: blur(3px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      animation: nebula-stars 8s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+      animation: nebula-glow 5s infinite;
+    }
+  }
+
+  .ocean-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #00008b, #1e90ff);
+      animation: ocean-wave 4s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      animation: ocean-bubbles 3s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+      animation: ocean-foam 2s infinite;
+    }
+  }
+
+  .desert-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #d2b48c, #f4a460, #d2b48c);
+      animation: desert-heat 3s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+      animation: desert-mirage 4s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: desert-glow 2s infinite;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1605,55 +1699,56 @@
     50% { opacity: 0.7; }
   }
 
-  @keyframes rainbow-flow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  @keyframes nebula-swirl {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.1); }
   }
 
-  @keyframes rainbow-sparkle {
-    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.5; }
-    50% { transform: rotate(180deg) scale(1.2); opacity: 0.8; }
+  @keyframes nebula-stars {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(20px, -20px) scale(1.2); opacity: 0.8; }
   }
 
-  @keyframes rainbow-glow {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.7; }
-  }
-
-  @keyframes aurora-wave {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(5deg); }
-    50% { transform: translateY(0) rotate(0deg); }
-    75% { transform: translateY(10px) rotate(-5deg); }
-  }
-
-  @keyframes aurora-flow {
-    0% { transform: translateX(0) scale(1); }
-    50% { transform: translateX(50px) scale(1.2); }
-    100% { transform: translateX(0) scale(1); }
-  }
-
-  @keyframes aurora-pulse {
+  @keyframes nebula-glow {
     0%, 100% { opacity: 0.2; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.1); }
   }
 
-  @keyframes storm-cloud {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-5px) scale(1.05); }
+  @keyframes ocean-wave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(5px) rotate(-2deg); }
   }
 
-  @keyframes rain-fall {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
+  @keyframes ocean-bubbles {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(10px, -10px) scale(1.2); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
   }
 
-  @keyframes lightning {
-    0%, 100% { opacity: 0; }
-    10% { opacity: 1; }
-    20% { opacity: 0; }
-    30% { opacity: 1; }
-    40% { opacity: 0; }
+  @keyframes ocean-foam {
+    0%, 100% { transform: translateY(0); opacity: 0.3; }
+    50% { transform: translateY(-5px); opacity: 0.7; }
+  }
+
+  @keyframes desert-heat {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(1deg); }
+    50% { transform: scale(1) rotate(0deg); }
+    75% { transform: scale(1.01) rotate(-1deg); }
+  }
+
+  @keyframes desert-mirage {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes desert-glow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
   }
 }

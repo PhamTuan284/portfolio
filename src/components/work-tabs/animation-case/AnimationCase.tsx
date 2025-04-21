@@ -276,6 +276,24 @@ const AnimationCase: React.FC = () => {
       title: 'Storm Effect',
       description: 'Dynamic weather with lightning and rain',
       className: 'storm-animation'
+    },
+    {
+      id: 'nebula',
+      title: 'Nebula Effect',
+      description: 'Cosmic cloud with swirling colors',
+      className: 'nebula-animation'
+    },
+    {
+      id: 'ocean',
+      title: 'Ocean Effect',
+      description: 'Deep sea with waves and bubbles',
+      className: 'ocean-animation'
+    },
+    {
+      id: 'desert',
+      title: 'Desert Effect',
+      description: 'Sandy dunes with heat waves',
+      className: 'desert-animation'
     }
   ];
 
