@@ -294,6 +294,24 @@ const AnimationCase: React.FC = () => {
       title: 'Desert Effect',
       description: 'Sandy dunes with heat waves',
       className: 'desert-animation'
+    },
+    {
+      id: 'jungle',
+      title: 'Jungle Effect',
+      description: 'Lush rainforest with dynamic foliage',
+      className: 'jungle-animation'
+    },
+    {
+      id: 'arctic',
+      title: 'Arctic Effect',
+      description: 'Frozen landscape with snow and ice',
+      className: 'arctic-animation'
+    },
+    {
+      id: 'volcano',
+      title: 'Volcano Effect',
+      description: 'Erupting volcano with lava and smoke',
+      className: 'volcano-animation'
     }
   ];
 

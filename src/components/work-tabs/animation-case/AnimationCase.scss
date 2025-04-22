@@ -895,6 +895,97 @@
     }
   }
 
+  .jungle-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #228b22, #32cd32, #228b22);
+      animation: jungle-sway 4s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 100, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0, 100, 0, 0.1) 0%, transparent 50%);
+      animation: jungle-leaves 3s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(0, 100, 0, 0.1));
+      animation: jungle-light 2s infinite;
+    }
+  }
+
+  .arctic-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #ffffff, #e6f3ff);
+      animation: arctic-snow 4s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 50%);
+      animation: arctic-ice 3s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+      animation: arctic-glitter 2s infinite;
+    }
+  }
+
+  .volcano-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #8b0000, #ff4500, #ff8c00);
+      animation: volcano-erupt 3s infinite;
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 0, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 69, 0, 0.6) 0%, transparent 50%);
+      animation: volcano-lava 2s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+      animation: volcano-smoke 4s infinite;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1750,5 +1841,59 @@
   @keyframes desert-glow {
     0%, 100% { opacity: 0.3; transform: scale(1); }
     50% { opacity: 0.7; transform: scale(1.1); }
+  }
+
+  @keyframes jungle-sway {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(5px) rotate(-2deg); }
+  }
+
+  @keyframes jungle-leaves {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(10px, -10px) scale(1.2); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  }
+
+  @keyframes jungle-light {
+    0%, 100% { transform: translateY(0); opacity: 0.3; }
+    50% { transform: translateY(-5px); opacity: 0.7; }
+  }
+
+  @keyframes arctic-snow {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(1deg); }
+    50% { transform: scale(1) rotate(0deg); }
+    75% { transform: scale(1.01) rotate(-1deg); }
+  }
+
+  @keyframes arctic-ice {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes arctic-glitter {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+  }
+
+  @keyframes volcano-erupt {
+    0%, 100% { transform: scale(1) translateY(0); }
+    25% { transform: scale(1.05) translateY(-5px); }
+    50% { transform: scale(1) translateY(0); }
+    75% { transform: scale(1.02) translateY(-2px); }
+  }
+
+  @keyframes volcano-lava {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+  }
+
+  @keyframes volcano-smoke {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    50% { transform: translateY(-20px) scale(1.2); opacity: 0.5; }
+    100% { transform: translateY(-40px) scale(1.4); opacity: 0; }
   }
 }
