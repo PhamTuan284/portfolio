@@ -312,6 +312,24 @@ const AnimationCase: React.FC = () => {
       title: 'Volcano Effect',
       description: 'Erupting volcano with lava and smoke',
       className: 'volcano-animation'
+    },
+    {
+      id: 'space',
+      title: 'Space Effect',
+      description: 'Cosmic void with stars and planets',
+      className: 'space-animation'
+    },
+    {
+      id: 'underwater',
+      title: 'Underwater Effect',
+      description: 'Deep sea with marine life and bubbles',
+      className: 'underwater-animation'
+    },
+    {
+      id: 'mountain',
+      title: 'Mountain Effect',
+      description: 'Majestic peaks with clouds and mist',
+      className: 'mountain-animation'
     }
   ];
 
