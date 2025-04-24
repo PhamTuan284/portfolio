@@ -330,6 +330,24 @@ const AnimationCase: React.FC = () => {
       title: 'Mountain Effect',
       description: 'Majestic peaks with clouds and mist',
       className: 'mountain-animation'
+    },
+    {
+      id: 'cloud',
+      title: 'Cloud Effect',
+      description: 'Floating clouds with dynamic movement',
+      className: 'cloud-animation'
+    },
+    {
+      id: 'forest',
+      title: 'Forest Effect',
+      description: 'Dense woodland with swaying trees',
+      className: 'forest-animation'
+    },
+    {
+      id: 'sunset',
+      title: 'Sunset Effect',
+      description: 'Vibrant sunset with color transitions',
+      className: 'sunset-animation'
     }
   ];
 
