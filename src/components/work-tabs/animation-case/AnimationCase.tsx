@@ -348,6 +348,24 @@ const AnimationCase: React.FC = () => {
       title: 'Sunset Effect',
       description: 'Vibrant sunset with color transitions',
       className: 'sunset-animation'
+    },
+    {
+      id: 'cosmic',
+      title: 'Cosmic Effect',
+      description: 'Deep space with colorful nebulae and stardust',
+      className: 'cosmic-animation'
+    },
+    {
+      id: 'waterfall',
+      title: 'Waterfall Effect',
+      description: 'Cascading water with mist and splashes',
+      className: 'waterfall-animation'
+    },
+    {
+      id: 'wind',
+      title: 'Wind Effect',
+      description: 'Dynamic air currents with swirling patterns',
+      className: 'wind-animation'
     }
   ];
 

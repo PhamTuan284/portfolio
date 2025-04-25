@@ -1167,6 +1167,124 @@
     }
   }
 
+  .cosmic-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #0d0221, #1b2735, #090a0f);
+      animation: cosmic-swirl 8s infinite;
+      box-shadow: 0 0 30px rgba(147, 112, 219, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 70% 70%, rgba(147, 112, 219, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 50% 50%, rgba(123, 104, 238, 0.4) 0%, transparent 100%);
+      animation: cosmic-stars 6s infinite;
+      opacity: 0.7;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(147, 112, 219, 0.2),
+        rgba(123, 104, 238, 0.2),
+        transparent
+      );
+      animation: cosmic-nebula 10s infinite linear;
+      transform-origin: center;
+    }
+  }
+
+  .waterfall-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #4facfe, #00f2fe);
+      animation: waterfall-flow 2s infinite linear;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.4) 50%,
+          rgba(255, 255, 255, 0.2) 100%
+        );
+      animation: waterfall-cascade 1s infinite linear;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.4) 0%,
+        transparent 60%
+      );
+      animation: waterfall-mist 3s infinite;
+      filter: blur(2px);
+    }
+  }
+
+  .wind-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(120deg, #e0e0e0, #f5f5f5);
+      animation: wind-sway 3s infinite ease-in-out;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        repeating-linear-gradient(
+          45deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 10%,
+          transparent 20%
+        );
+      animation: wind-pattern 4s infinite linear;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 70%
+      );
+      animation: wind-swirl 6s infinite linear;
+      transform-origin: center;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -2180,5 +2298,54 @@
   @keyframes sunset-light {
     0%, 100% { opacity: 0.3; transform: scale(1); }
     50% { opacity: 0.7; transform: scale(1.1); }
+  }
+
+  @keyframes cosmic-swirl {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.1); }
+  }
+
+  @keyframes cosmic-stars {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.7; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+  }
+
+  @keyframes cosmic-nebula {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes waterfall-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+  }
+
+  @keyframes waterfall-cascade {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0%); }
+  }
+
+  @keyframes waterfall-mist {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+  }
+
+  @keyframes wind-sway {
+    0%, 100% { transform: skew(0deg); }
+    25% { transform: skew(3deg); }
+    75% { transform: skew(-3deg); }
+  }
+
+  @keyframes wind-pattern {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(0%) rotate(360deg); }
+  }
+
+  @keyframes wind-swirl {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 0.4; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.2; }
   }
 }
