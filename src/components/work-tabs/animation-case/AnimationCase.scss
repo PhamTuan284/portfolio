@@ -1285,6 +1285,122 @@
     }
   }
 
+  .crystal-cave-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      animation: crystal-cave-glow 4s infinite;
+      box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(138, 43, 226, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(75, 0, 130, 0.6) 0%, transparent 50%);
+      animation: crystal-cave-sparkle 3s infinite;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(138, 43, 226, 0.2),
+        rgba(75, 0, 130, 0.2),
+        transparent
+      );
+      animation: crystal-cave-prism 6s infinite linear;
+      transform-origin: center;
+      mix-blend-mode: screen;
+    }
+  }
+
+  .northern-lights-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      animation: aurora-wave 8s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        linear-gradient(45deg, transparent 0%, rgba(0, 255, 255, 0.2) 50%, transparent 100%),
+        linear-gradient(-45deg, transparent 0%, rgba(0, 255, 0, 0.2) 50%, transparent 100%);
+      animation: aurora-flow 6s infinite;
+      filter: blur(5px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+      );
+      animation: aurora-pulse 4s infinite;
+      transform-origin: center;
+    }
+  }
+
+  .sandstorm-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #d2b48c, #f4a460, #d2b48c);
+      animation: sandstorm-swirl 4s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        repeating-linear-gradient(
+          45deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 10%,
+          transparent 20%
+        );
+      animation: sandstorm-particles 3s infinite linear;
+      filter: blur(1px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 70%
+      );
+      animation: sandstorm-wind 6s infinite linear;
+      transform-origin: center;
+    }
+  }
+
   // Keyframes
   @keyframes fade {
     0%,
@@ -1437,9 +1553,9 @@
   }
 
   @keyframes aurora-flow {
-    0% { transform: translateX(0) scale(1); }
-    50% { transform: translateX(50px) scale(1.2); }
-    100% { transform: translateX(0) scale(1); }
+    0% { transform: translateX(-100%) scale(1); }
+    50% { transform: translateX(0%) scale(1.2); }
+    100% { transform: translateX(100%) scale(1); }
   }
 
   @keyframes aurora-pulse {
@@ -2344,6 +2460,57 @@
   }
 
   @keyframes wind-swirl {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 0.4; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.2; }
+  }
+
+  @keyframes crystal-cave-glow {
+    0%, 100% { box-shadow: 0 0 30px rgba(138, 43, 226, 0.5); }
+    50% { box-shadow: 0 0 50px rgba(138, 43, 226, 0.8); }
+  }
+
+  @keyframes crystal-cave-sparkle {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.7; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+  }
+
+  @keyframes crystal-cave-prism {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes aurora-wave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(-5deg); }
+  }
+
+  @keyframes aurora-flow {
+    0% { transform: translateX(-100%) scale(1); }
+    50% { transform: translateX(0%) scale(1.2); }
+    100% { transform: translateX(100%) scale(1); }
+  }
+
+  @keyframes aurora-pulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+  }
+
+  @keyframes sandstorm-swirl {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.1); }
+  }
+
+  @keyframes sandstorm-particles {
+    0% { transform: translateX(-100%) rotate(0deg); }
+    100% { transform: translateX(0%) rotate(360deg); }
+  }
+
+  @keyframes sandstorm-wind {
     0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
     50% { transform: rotate(180deg) scale(1.2); opacity: 0.4; }
     100% { transform: rotate(360deg) scale(1); opacity: 0.2; }

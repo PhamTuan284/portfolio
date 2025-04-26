@@ -366,6 +366,24 @@ const AnimationCase: React.FC = () => {
       title: 'Wind Effect',
       description: 'Dynamic air currents with swirling patterns',
       className: 'wind-animation'
+    },
+    {
+      id: 'crystal-cave',
+      title: 'Crystal Cave Effect',
+      description: 'Glowing crystals with prismatic light effects',
+      className: 'crystal-cave-animation'
+    },
+    {
+      id: 'northern-lights',
+      title: 'Northern Lights Effect',
+      description: 'Aurora borealis with flowing color waves',
+      className: 'northern-lights-animation'
+    },
+    {
+      id: 'sandstorm',
+      title: 'Sandstorm Effect',
+      description: 'Swirling desert winds with sand particles',
+      className: 'sandstorm-animation'
     }
   ];
 
