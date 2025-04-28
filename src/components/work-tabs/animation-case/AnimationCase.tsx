@@ -384,6 +384,12 @@ const AnimationCase: React.FC = () => {
       title: 'Sandstorm Effect',
       description: 'Swirling desert winds with sand particles',
       className: 'sandstorm-animation'
+    },
+    {
+      id: 'moonlight',
+      title: 'Moonlight Effect',
+      description: 'Serene night scene with glowing moon and subtle light effects',
+      className: 'moonlight-animation'
     }
   ];
 
