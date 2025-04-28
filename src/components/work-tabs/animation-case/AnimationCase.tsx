@@ -390,6 +390,12 @@ const AnimationCase: React.FC = () => {
       title: 'Moonlight Effect',
       description: 'Serene night scene with glowing moon and subtle light effects',
       className: 'moonlight-animation'
+    },
+    {
+      id: 'meteor',
+      title: 'Meteor Shower',
+      description: 'Dynamic night sky with falling meteors and trailing effects',
+      className: 'meteor-animation'
     }
   ];
 
