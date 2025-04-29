@@ -1469,8 +1469,8 @@
     perspective: 1000px;
 
     &:hover .animation-content {
-      background: linear-gradient(45deg, #0d0221, #1b2735, #090a0f);
-      animation: quantum-tunnel 4s infinite linear;
+      background: linear-gradient(45deg, #000428, #004e92);
+      animation: quantum-tunnel 3s infinite linear;
       transform-style: preserve-3d;
     }
 
@@ -1481,74 +1481,56 @@
       height: 200%;
       background: 
         radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.8) 0%, transparent 2%),
-        radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8) 0%, transparent 2%),
-        radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.4) 0%, transparent 100%);
-      animation: quantum-particles 2s infinite linear;
-      opacity: 0.7;
+        radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 50% 20%, rgba(0, 255, 255, 0.8) 0%, transparent 2%);
+      animation: quantum-particles 4s infinite;
     }
 
     &::after {
       content: '';
       position: absolute;
-      width: 150%;
-      height: 150%;
-      background: conic-gradient(
-        from 0deg,
-        transparent,
-        rgba(0, 255, 255, 0.2),
-        rgba(255, 0, 255, 0.2),
-        transparent
-      );
-      animation: quantum-rings 3s infinite linear;
-      transform-origin: center;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+      animation: quantum-glow 2s infinite;
     }
   }
 
   @keyframes quantum-tunnel {
     0% {
-      transform: perspective(1000px) translateZ(0) rotateX(0deg);
-    }
-    25% {
-      transform: perspective(1000px) translateZ(100px) rotateX(15deg);
+      transform: translateZ(0) rotateX(0deg);
     }
     50% {
-      transform: perspective(1000px) translateZ(200px) rotateX(0deg);
-    }
-    75% {
-      transform: perspective(1000px) translateZ(100px) rotateX(-15deg);
+      transform: translateZ(100px) rotateX(180deg);
     }
     100% {
-      transform: perspective(1000px) translateZ(0) rotateX(0deg);
+      transform: translateZ(0) rotateX(360deg);
     }
   }
 
   @keyframes quantum-particles {
     0% {
-      transform: translate(-50%, -50%) scale(1) rotate(0deg);
-      opacity: 0.7;
+      transform: translateZ(0) scale(1);
+      opacity: 0.8;
     }
     50% {
-      transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
-      opacity: 0.9;
+      transform: translateZ(200px) scale(1.5);
+      opacity: 0.4;
     }
     100% {
-      transform: translate(-50%, -50%) scale(1) rotate(360deg);
-      opacity: 0.7;
+      transform: translateZ(0) scale(1);
+      opacity: 0.8;
     }
   }
 
-  @keyframes quantum-rings {
-    0% {
-      transform: rotate(0deg) scale(1);
+  @keyframes quantum-glow {
+    0%, 100% {
       opacity: 0.3;
+      transform: scale(1);
     }
     50% {
-      transform: rotate(180deg) scale(1.2);
-      opacity: 0.6;
-    }
-    100% {
-      transform: rotate(360deg) scale(1);
-      opacity: 0.3;
+      opacity: 0.7;
+      transform: scale(1.2);
     }
   }
 
@@ -2727,6 +2709,75 @@
     100% { 
       transform: translate(100%, 100%) rotate(45deg);
       opacity: 0;
+    }
+  }
+
+  .meteor-shower-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: linear-gradient(to bottom, #000428, #004e92);
+      animation: meteor-shower 3s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 2%);
+      animation: stars-twinkle 4s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: meteor-glow 2s infinite;
+    }
+  }
+
+  @keyframes meteor-shower {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-10px) rotate(5deg);
+    }
+    50% {
+      transform: translateY(0) rotate(0deg);
+    }
+    75% {
+      transform: translateY(10px) rotate(-5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  @keyframes stars-twinkle {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes meteor-glow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.2);
     }
   }
 }
