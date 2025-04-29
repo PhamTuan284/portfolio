@@ -218,6 +218,12 @@ const AnimationCase: React.FC = () => {
       className: 'galaxy-animation'
     },
     {
+      id: 'quantum-tunnel',
+      title: 'Quantum Tunnel',
+      description: 'Futuristic tunnel effect with particle movement',
+      className: 'quantum-tunnel-animation'
+    },
+    {
       id: 'circuit',
       title: 'Circuit Effect',
       description: 'Animated circuit board with flowing electricity',
