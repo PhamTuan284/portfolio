@@ -402,6 +402,12 @@ const AnimationCase: React.FC = () => {
       title: 'Meteor Shower',
       description: 'Beautiful night sky with falling stars effect',
       className: 'meteor-shower-animation'
+    },
+    {
+      id: 'rainbow-wave',
+      title: 'Rainbow Wave',
+      description: 'Combined wave motion with rainbow color transitions',
+      className: 'rainbow-wave-animation'
     }
   ];
 
