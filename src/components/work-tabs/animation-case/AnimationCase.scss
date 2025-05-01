@@ -2803,4 +2803,90 @@
       background-position: 0% 50%;
     }
   }
+
+  .quantum-tunnel-animation {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+
+    &:hover .animation-content {
+      background: linear-gradient(45deg, #000428, #004e92);
+      animation: quantum-tunnel 3s infinite linear;
+      transform-style: preserve-3d;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.8) 0%, transparent 2%),
+        radial-gradient(circle at 50% 20%, rgba(0, 255, 255, 0.8) 0%, transparent 2%);
+      animation: quantum-particles 4s infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+      animation: quantum-glow 2s infinite;
+    }
+  }
+
+  @keyframes quantum-tunnel {
+    0% {
+      transform: translateZ(0) rotateX(0deg);
+    }
+    50% {
+      transform: translateZ(100px) rotateX(180deg);
+    }
+    100% {
+      transform: translateZ(0) rotateX(360deg);
+    }
+  }
+
+  @keyframes quantum-particles {
+    0% {
+      transform: translateZ(0) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateZ(200px) scale(1.5);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateZ(0) scale(1);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes quantum-glow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes rainbowWave {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      background-position: 0% 50%;
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+      background-position: 100% 50%;
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+      background-position: 0% 50%;
+    }
+  }
 }

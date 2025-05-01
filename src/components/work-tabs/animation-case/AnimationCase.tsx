@@ -408,6 +408,12 @@ const AnimationCase: React.FC = () => {
       title: 'Rainbow Wave',
       description: 'Combined wave motion with rainbow color transitions',
       className: 'rainbow-wave-animation'
+    },
+    {
+      id: 'quantum-tunnel',
+      title: 'Quantum Tunnel',
+      description: '3D tunnel effect with glowing particles',
+      className: 'quantum-tunnel-animation'
     }
   ];
 
