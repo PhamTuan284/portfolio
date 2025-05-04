@@ -414,6 +414,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Tunnel',
       description: '3D tunnel effect with glowing particles',
       className: 'quantum-tunnel-animation'
+    },
+    {
+      id: 'holographic-interface',
+      title: 'Holographic Interface',
+      description: 'Futuristic hologram with scan lines and glow effects',
+      className: 'holographic-interface-animation'
     }
   ];
 

@@ -2889,4 +2889,62 @@
       background-position: 0% 50%;
     }
   }
+
+  .holographic-interface-animation {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .animation-content {
+      background: rgba(0, 255, 255, 0.1);
+      border: 2px solid rgba(0, 255, 255, 0.5);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      animation: hologram-pulse 2s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.8), transparent);
+      animation: scan-line 2s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 255, 0.1) 2px,
+        rgba(0, 255, 255, 0.1) 4px
+      );
+      pointer-events: none;
+    }
+  }
+
+  @keyframes hologram-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+  }
+
+  @keyframes scan-line {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
 }
