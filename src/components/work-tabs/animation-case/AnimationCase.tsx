@@ -426,6 +426,12 @@ const AnimationCase: React.FC = () => {
       title: 'Time Warp',
       description: 'Distortion effect that bends and warps time and space',
       className: 'time-warp-animation'
+    },
+    {
+      id: 'digital-rain',
+      title: 'Digital Rain',
+      description: 'Cascading digital characters in Matrix-style effect',
+      className: 'digital-rain-animation'
     }
   ];
 
