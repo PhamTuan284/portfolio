@@ -432,6 +432,18 @@ const AnimationCase: React.FC = () => {
       title: 'Digital Rain',
       description: 'Cascading digital characters in Matrix-style effect',
       className: 'digital-rain-animation'
+    },
+    {
+      id: 'neon-pulse',
+      title: 'Neon Pulse',
+      description: 'Vibrant cyberpunk-style neon glow with pulsing effect',
+      className: 'neon-pulse-animation'
+    },
+    {
+      id: 'particle-explosion',
+      title: 'Particle Explosion',
+      description: 'Dynamic burst of particles with physics-based movement',
+      className: 'particle-explosion-animation'
     }
   ];
 
