@@ -450,6 +450,12 @@ const AnimationCase: React.FC = () => {
       title: 'Magnetic Field',
       description: 'Interactive magnetic-like attraction and repulsion effect',
       className: 'magnetic-field-animation'
+    },
+    {
+      id: 'neural-network',
+      title: 'Neural Network',
+      description: 'Dynamic interconnected nodes with flowing data visualization',
+      className: 'neural-network-animation'
     }
   ];
 
