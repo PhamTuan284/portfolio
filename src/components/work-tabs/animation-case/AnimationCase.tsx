@@ -444,6 +444,12 @@ const AnimationCase: React.FC = () => {
       title: 'Particle Explosion',
       description: 'Dynamic burst of particles with physics-based movement',
       className: 'particle-explosion-animation'
+    },
+    {
+      id: 'magnetic-field',
+      title: 'Magnetic Field',
+      description: 'Interactive magnetic-like attraction and repulsion effect',
+      className: 'magnetic-field-animation'
     }
   ];
 
