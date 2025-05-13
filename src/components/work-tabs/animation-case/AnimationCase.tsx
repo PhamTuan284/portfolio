@@ -456,6 +456,12 @@ const AnimationCase: React.FC = () => {
       title: 'Neural Network',
       description: 'Dynamic interconnected nodes with flowing data visualization',
       className: 'neural-network-animation'
+    },
+    {
+      id: 'energy-field',
+      title: 'Energy Field',
+      description: 'Pulsating energy shield with dynamic force field effects',
+      className: 'energy-field-animation'
     }
   ];
 
