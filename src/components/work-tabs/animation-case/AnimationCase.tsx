@@ -462,6 +462,12 @@ const AnimationCase: React.FC = () => {
       title: 'Energy Field',
       description: 'Pulsating energy shield with dynamic force field effects',
       className: 'energy-field-animation'
+    },
+    {
+      id: 'quantum-entanglement',
+      title: 'Quantum Entanglement',
+      description: 'Interconnected particles that mirror each other\'s movements in a quantum-like state',
+      className: 'quantum-entanglement-animation'
     }
   ];
 
