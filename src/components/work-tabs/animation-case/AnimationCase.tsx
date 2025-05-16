@@ -468,6 +468,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Entanglement',
       description: 'Interconnected particles that mirror each other\'s movements in a quantum-like state',
       className: 'quantum-entanglement-animation'
+    },
+    {
+      id: 'crystal-growth',
+      title: 'Crystal Growth',
+      description: 'Dynamic formation of crystalline structures with branching patterns and geometric precision',
+      className: 'crystal-growth-animation'
     }
   ];
 
