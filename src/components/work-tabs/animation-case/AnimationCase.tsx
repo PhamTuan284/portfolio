@@ -474,6 +474,12 @@ const AnimationCase: React.FC = () => {
       title: 'Crystal Growth',
       description: 'Dynamic formation of crystalline structures with branching patterns and geometric precision',
       className: 'crystal-growth-animation'
+    },
+    {
+      id: 'cosmic-dust',
+      title: 'Cosmic Dust',
+      description: 'Swirling space dust particles with gravitational interactions and glowing trails',
+      className: 'cosmic-dust-animation'
     }
   ];
 
