@@ -480,6 +480,12 @@ const AnimationCase: React.FC = () => {
       title: 'Cosmic Dust',
       description: 'Swirling space dust particles with gravitational interactions and glowing trails',
       className: 'cosmic-dust-animation'
+    },
+    {
+      id: 'aurora-burst',
+      title: 'Aurora Burst',
+      description: 'Explosive aurora effect with dynamic color waves and energy particles',
+      className: 'aurora-burst-animation'
     }
   ];
 
