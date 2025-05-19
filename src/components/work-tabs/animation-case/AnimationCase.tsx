@@ -486,6 +486,12 @@ const AnimationCase: React.FC = () => {
       title: 'Aurora Burst',
       description: 'Explosive aurora effect with dynamic color waves and energy particles',
       className: 'aurora-burst-animation'
+    },
+    {
+      id: 'cyber-grid',
+      title: 'Cyber Grid',
+      description: 'Futuristic grid pattern with neon lines and digital pulse effects',
+      className: 'cyber-grid-animation'
     }
   ];
 
