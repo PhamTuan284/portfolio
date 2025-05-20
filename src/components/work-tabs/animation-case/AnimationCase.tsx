@@ -492,6 +492,12 @@ const AnimationCase: React.FC = () => {
       title: 'Cyber Grid',
       description: 'Futuristic grid pattern with neon lines and digital pulse effects',
       className: 'cyber-grid-animation'
+    },
+    {
+      id: 'solar-flare',
+      title: 'Solar Flare',
+      description: 'Dynamic sun-like effect with radiating energy waves and coronal mass ejections',
+      className: 'solar-flare-animation'
     }
   ];
 
