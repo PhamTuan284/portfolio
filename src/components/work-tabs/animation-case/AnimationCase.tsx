@@ -498,6 +498,12 @@ const AnimationCase: React.FC = () => {
       title: 'Solar Flare',
       description: 'Dynamic sun-like effect with radiating energy waves and coronal mass ejections',
       className: 'solar-flare-animation'
+    },
+    {
+      id: 'quantum-vortex',
+      title: 'Quantum Vortex',
+      description: 'Hypnotic spiral effect with glowing particle trails and energy streams',
+      className: 'quantum-vortex-animation'
     }
   ];
 
