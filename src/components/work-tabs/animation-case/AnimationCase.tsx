@@ -504,6 +504,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Vortex',
       description: 'Hypnotic spiral effect with glowing particle trails and energy streams',
       className: 'quantum-vortex-animation'
+    },
+    {
+      id: 'dimensional-rift',
+      title: 'Dimensional Rift',
+      description: 'Sci-fi portal effect with geometric distortions and energy waves',
+      className: 'dimensional-rift-animation'
     }
   ];
 
