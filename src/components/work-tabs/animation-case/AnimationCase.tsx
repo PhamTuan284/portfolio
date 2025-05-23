@@ -510,6 +510,12 @@ const AnimationCase: React.FC = () => {
       title: 'Dimensional Rift',
       description: 'Sci-fi portal effect with geometric distortions and energy waves',
       className: 'dimensional-rift-animation'
+    },
+    {
+      id: 'pixelate',
+      title: 'Pixelate Effect',
+      description: 'Retro pixelation transition effect',
+      className: 'pixelate-animation'
     }
   ];
 
