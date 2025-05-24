@@ -516,6 +516,12 @@ const AnimationCase: React.FC = () => {
       title: 'Pixelate Effect',
       description: 'Retro pixelation transition effect',
       className: 'pixelate-animation'
+    },
+    {
+      id: 'holographic-glitch',
+      title: 'Holographic Glitch',
+      description: 'Futuristic hologram with digital distortion and scan lines',
+      className: 'holographic-glitch-animation'
     }
   ];
 
