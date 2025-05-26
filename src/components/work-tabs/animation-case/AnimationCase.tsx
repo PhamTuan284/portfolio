@@ -522,6 +522,12 @@ const AnimationCase: React.FC = () => {
       title: 'Holographic Glitch',
       description: 'Futuristic hologram with digital distortion and scan lines',
       className: 'holographic-glitch-animation'
+    },
+    {
+      id: 'liquid-metal',
+      title: 'Liquid Metal',
+      description: 'Flowing metallic effect with dynamic reflections and surface tension',
+      className: 'liquid-metal-animation'
     }
   ];
 
