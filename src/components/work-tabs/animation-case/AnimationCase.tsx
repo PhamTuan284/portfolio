@@ -528,6 +528,12 @@ const AnimationCase: React.FC = () => {
       title: 'Liquid Metal',
       description: 'Flowing metallic effect with dynamic reflections and surface tension',
       className: 'liquid-metal-animation'
+    },
+    {
+      id: 'data-stream',
+      title: 'Data Stream',
+      description: 'Flowing digital data with binary code and glowing particles',
+      className: 'data-stream-animation'
     }
   ];
 
