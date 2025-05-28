@@ -534,6 +534,12 @@ const AnimationCase: React.FC = () => {
       title: 'Data Stream',
       description: 'Flowing digital data with binary code and glowing particles',
       className: 'data-stream-animation'
+    },
+    {
+      id: 'quantum-ripple',
+      title: 'Quantum Ripple',
+      description: 'Interference pattern effect with quantum-like wave behavior and particle interactions',
+      className: 'quantum-ripple-animation'
     }
   ];
 
