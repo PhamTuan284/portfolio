@@ -540,6 +540,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Ripple',
       description: 'Interference pattern effect with quantum-like wave behavior and particle interactions',
       className: 'quantum-ripple-animation'
+    },
+    {
+      id: 'bio-luminescence',
+      title: 'Bio-luminescence',
+      description: 'Organic glowing effect inspired by deep sea creatures with pulsing light patterns',
+      className: 'bio-luminescence-animation'
     }
   ];
 
