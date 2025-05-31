@@ -421,6 +421,12 @@ const AnimationCase: React.FC = () => {
       description: 'Futuristic hologram with scan lines and glow effects',
       className: 'holographic-interface-animation'
     },
+    {
+      id: 'neon-pulse',
+      title: 'Neon Pulse',
+      description: 'Vibrant neon glow with synchronized pulsing and color shifts',
+      className: 'neon-pulse-animation'
+    },
   ];
 
   useEffect(() => {
