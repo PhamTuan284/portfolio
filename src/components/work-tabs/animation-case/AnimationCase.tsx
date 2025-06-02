@@ -427,6 +427,12 @@ const AnimationCase: React.FC = () => {
       description: 'Vibrant neon glow with synchronized pulsing and color shifts',
       className: 'neon-pulse-animation'
     },
+    {
+      id: 'digital-rain',
+      title: 'Digital Rain',
+      description: 'Matrix-inspired falling digital characters with glowing trails',
+      className: 'digital-rain-animation'
+    }
   ];
 
   useEffect(() => {
