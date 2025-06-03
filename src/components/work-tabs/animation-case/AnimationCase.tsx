@@ -432,6 +432,12 @@ const AnimationCase: React.FC = () => {
       title: 'Digital Rain',
       description: 'Matrix-inspired falling digital characters with glowing trails',
       className: 'digital-rain-animation'
+    },
+    {
+      id: 'cosmic-portal',
+      title: 'Cosmic Portal',
+      description: 'Hypnotic space-time distortion with swirling cosmic particles',
+      className: 'cosmic-portal-animation'
     }
   ];
 
