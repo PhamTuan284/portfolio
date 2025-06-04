@@ -438,6 +438,12 @@ const AnimationCase: React.FC = () => {
       title: 'Cosmic Portal',
       description: 'Hypnotic space-time distortion with swirling cosmic particles',
       className: 'cosmic-portal-animation'
+    },
+    {
+      id: 'neon-circuit',
+      title: 'Neon Circuit',
+      description: 'Futuristic circuit board with pulsing neon pathways and data flow',
+      className: 'neon-circuit-animation'
     }
   ];
 
