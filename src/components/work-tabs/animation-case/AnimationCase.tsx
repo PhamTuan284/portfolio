@@ -444,6 +444,12 @@ const AnimationCase: React.FC = () => {
       title: 'Neon Circuit',
       description: 'Futuristic circuit board with pulsing neon pathways and data flow',
       className: 'neon-circuit-animation'
+    },
+    {
+      id: 'cyberpunk-grid',
+      title: 'Cyberpunk Grid',
+      description: 'Retro-futuristic grid with neon lines and digital distortion',
+      className: 'cyberpunk-grid-animation'
     }
   ];
 
