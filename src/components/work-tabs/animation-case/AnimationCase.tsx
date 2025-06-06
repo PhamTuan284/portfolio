@@ -450,6 +450,12 @@ const AnimationCase: React.FC = () => {
       title: 'Cyberpunk Grid',
       description: 'Retro-futuristic grid with neon lines and digital distortion',
       className: 'cyberpunk-grid-animation'
+    },
+    {
+      id: 'holographic-scanner',
+      title: 'Holographic Scanner',
+      description: 'Advanced scanning effect with holographic data visualization and depth perception',
+      className: 'holographic-scanner-animation'
     }
   ];
 
