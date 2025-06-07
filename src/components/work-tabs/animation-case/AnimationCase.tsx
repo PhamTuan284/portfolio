@@ -456,6 +456,12 @@ const AnimationCase: React.FC = () => {
       title: 'Holographic Scanner',
       description: 'Advanced scanning effect with holographic data visualization and depth perception',
       className: 'holographic-scanner-animation'
+    },
+    {
+      id: 'quantum-ripple',
+      title: 'Quantum Ripple',
+      description: 'Interdimensional ripple effect with particle entanglement and quantum fluctuations',
+      className: 'quantum-ripple-animation'
     }
   ];
 
