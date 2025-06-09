@@ -462,6 +462,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Ripple',
       description: 'Interdimensional ripple effect with particle entanglement and quantum fluctuations',
       className: 'quantum-ripple-animation'
+    },
+    {
+      id: 'neural-network',
+      title: 'Neural Network',
+      description: 'Dynamic AI network visualization with pulsing nodes and flowing data connections',
+      className: 'neural-network-animation'
     }
   ];
 
