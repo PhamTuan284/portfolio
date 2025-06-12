@@ -420,54 +420,6 @@ const AnimationCase: React.FC = () => {
       title: 'Holographic Interface',
       description: 'Futuristic hologram with scan lines and glow effects',
       className: 'holographic-interface-animation'
-    },
-    {
-      id: 'neon-pulse',
-      title: 'Neon Pulse',
-      description: 'Vibrant neon glow with synchronized pulsing and color shifts',
-      className: 'neon-pulse-animation'
-    },
-    {
-      id: 'digital-rain',
-      title: 'Digital Rain',
-      description: 'Matrix-inspired falling digital characters with glowing trails',
-      className: 'digital-rain-animation'
-    },
-    {
-      id: 'cosmic-portal',
-      title: 'Cosmic Portal',
-      description: 'Hypnotic space-time distortion with swirling cosmic particles',
-      className: 'cosmic-portal-animation'
-    },
-    {
-      id: 'neon-circuit',
-      title: 'Neon Circuit',
-      description: 'Futuristic circuit board with pulsing neon pathways and data flow',
-      className: 'neon-circuit-animation'
-    },
-    {
-      id: 'cyberpunk-grid',
-      title: 'Cyberpunk Grid',
-      description: 'Retro-futuristic grid with neon lines and digital distortion',
-      className: 'cyberpunk-grid-animation'
-    },
-    {
-      id: 'holographic-scanner',
-      title: 'Holographic Scanner',
-      description: 'Advanced scanning effect with holographic data visualization and depth perception',
-      className: 'holographic-scanner-animation'
-    },
-    {
-      id: 'quantum-ripple',
-      title: 'Quantum Ripple',
-      description: 'Interdimensional ripple effect with particle entanglement and quantum fluctuations',
-      className: 'quantum-ripple-animation'
-    },
-    {
-      id: 'neural-network',
-      title: 'Neural Network',
-      description: 'Dynamic AI network visualization with pulsing nodes and flowing data connections',
-      className: 'neural-network-animation'
     }
   ];
 
