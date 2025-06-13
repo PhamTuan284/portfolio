@@ -420,6 +420,12 @@ const AnimationCase: React.FC = () => {
       title: 'Holographic Interface',
       description: 'Futuristic hologram with scan lines and glow effects',
       className: 'holographic-interface-animation'
+    },
+    {
+      id: 'time-warp',
+      title: 'Time Warp Effect',
+      description: 'Temporal distortion with ripple and blur effects',
+      className: 'time-warp-animation'
     }
   ];
 
