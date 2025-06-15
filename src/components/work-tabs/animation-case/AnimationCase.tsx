@@ -426,6 +426,12 @@ const AnimationCase: React.FC = () => {
       title: 'Time Warp Effect',
       description: 'Temporal distortion with ripple and blur effects',
       className: 'time-warp-animation'
+    },
+    {
+      id: 'pixelate',
+      title: 'Pixelate Effect',
+      description: 'Retro pixelation transition effect',
+      className: 'pixelate-animation'
     }
   ];
 
