@@ -432,6 +432,12 @@ const AnimationCase: React.FC = () => {
       title: 'Pixelate Effect',
       description: 'Retro pixelation transition effect',
       className: 'pixelate-animation'
+    },
+    {
+      id: 'neon-pulse',
+      title: 'Neon Pulse Effect',
+      description: 'Vibrant neon glow with pulsing animation',
+      className: 'neon-pulse-animation'
     }
   ];
 
