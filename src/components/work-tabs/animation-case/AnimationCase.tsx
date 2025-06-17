@@ -438,6 +438,12 @@ const AnimationCase: React.FC = () => {
       title: 'Neon Pulse Effect',
       description: 'Vibrant neon glow with pulsing animation',
       className: 'neon-pulse-animation'
+    },
+    {
+      id: 'glitch-scan',
+      title: 'Glitch Scan Effect',
+      description: 'Digital glitch with scanning line distortion',
+      className: 'glitch-scan-animation'
     }
   ];
 
