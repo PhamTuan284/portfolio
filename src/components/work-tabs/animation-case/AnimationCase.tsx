@@ -444,6 +444,12 @@ const AnimationCase: React.FC = () => {
       title: 'Glitch Scan Effect',
       description: 'Digital glitch with scanning line distortion',
       className: 'glitch-scan-animation'
+    },
+    {
+      id: 'digital-rain',
+      title: 'Digital Rain Effect',
+      description: 'Matrix-style falling characters with glowing trails',
+      className: 'digital-rain-animation'
     }
   ];
 
