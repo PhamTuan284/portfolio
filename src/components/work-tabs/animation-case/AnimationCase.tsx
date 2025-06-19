@@ -450,6 +450,12 @@ const AnimationCase: React.FC = () => {
       title: 'Digital Rain Effect',
       description: 'Matrix-style falling characters with glowing trails',
       className: 'digital-rain-animation'
+    },
+    {
+      id: 'energy-field',
+      title: 'Energy Field Effect',
+      description: 'Pulsing force field with electric arcs and particle systems',
+      className: 'energy-field-animation'
     }
   ];
 
