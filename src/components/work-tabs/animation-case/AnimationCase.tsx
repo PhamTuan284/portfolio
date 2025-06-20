@@ -456,6 +456,12 @@ const AnimationCase: React.FC = () => {
       title: 'Energy Field Effect',
       description: 'Pulsing force field with electric arcs and particle systems',
       className: 'energy-field-animation'
+    },
+    {
+      id: 'data-stream',
+      title: 'Data Stream Effect',
+      description: 'Flowing digital data with binary code and network connections',
+      className: 'data-stream-animation'
     }
   ];
 
