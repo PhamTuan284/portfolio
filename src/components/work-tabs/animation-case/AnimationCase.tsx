@@ -462,6 +462,12 @@ const AnimationCase: React.FC = () => {
       title: 'Data Stream Effect',
       description: 'Flowing digital data with binary code and network connections',
       className: 'data-stream-animation'
+    },
+    {
+      id: 'plasma-ball',
+      title: 'Plasma Ball Effect',
+      description: 'Electric plasma with arcing lightning and energy tendrils',
+      className: 'plasma-ball-animation'
     }
   ];
 
