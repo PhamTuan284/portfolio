@@ -468,6 +468,12 @@ const AnimationCase: React.FC = () => {
       title: 'Plasma Ball Effect',
       description: 'Electric plasma with arcing lightning and energy tendrils',
       className: 'plasma-ball-animation'
+    },
+    {
+      id: 'crystal-resonance',
+      title: 'Crystal Resonance Effect',
+      description: 'Harmonic vibration with crystalline sound waves and frequency patterns',
+      className: 'crystal-resonance-animation'
     }
   ];
 
