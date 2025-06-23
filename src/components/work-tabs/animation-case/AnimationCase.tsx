@@ -474,6 +474,12 @@ const AnimationCase: React.FC = () => {
       title: 'Crystal Resonance Effect',
       description: 'Harmonic vibration with crystalline sound waves and frequency patterns',
       className: 'crystal-resonance-animation'
+    },
+    {
+      id: 'dream-sequence',
+      title: 'Dream Sequence Effect',
+      description: 'Surreal floating elements with soft transitions and ethereal glow',
+      className: 'dream-sequence-animation'
     }
   ];
 
