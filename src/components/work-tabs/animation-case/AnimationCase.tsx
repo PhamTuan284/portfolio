@@ -480,6 +480,12 @@ const AnimationCase: React.FC = () => {
       title: 'Dream Sequence Effect',
       description: 'Surreal floating elements with soft transitions and ethereal glow',
       className: 'dream-sequence-animation'
+    },
+    {
+      id: 'neural-network',
+      title: 'Neural Network Effect',
+      description: 'Artificial intelligence visualization with connecting nodes and data flow',
+      className: 'neural-network-animation'
     }
   ];
 
