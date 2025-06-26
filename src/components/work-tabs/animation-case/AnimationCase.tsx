@@ -486,6 +486,12 @@ const AnimationCase: React.FC = () => {
       title: 'Neural Network Effect',
       description: 'Artificial intelligence visualization with connecting nodes and data flow',
       className: 'neural-network-animation'
+    },
+    {
+      id: 'origami-fold',
+      title: 'Origami Fold Effect',
+      description: 'Paper folding animation with crisp edges and unfolding transitions',
+      className: 'origami-fold-animation'
     }
   ];
 
