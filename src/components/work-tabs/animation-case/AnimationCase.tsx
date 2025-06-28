@@ -492,12 +492,6 @@ const AnimationCase: React.FC = () => {
       title: 'Origami Fold Effect',
       description: 'Paper folding animation with crisp edges and unfolding transitions',
       className: 'origami-fold-animation'
-    },
-    {
-      id: 'liquid-metal',
-      title: 'Liquid Metal Effect',
-      description: 'Mercury-like fluid animation with metallic sheen and flowing motion',
-      className: 'liquid-metal-animation'
     }
   ];
 
