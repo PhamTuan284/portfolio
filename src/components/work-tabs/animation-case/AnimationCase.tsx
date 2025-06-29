@@ -492,6 +492,12 @@ const AnimationCase: React.FC = () => {
       title: 'Origami Fold Effect',
       description: 'Paper folding animation with crisp edges and unfolding transitions',
       className: 'origami-fold-animation'
+    },
+    {
+      id: 'prism-refraction',
+      title: 'Prism Refraction',
+      description: 'Light beam splits into a spectrum of colors with refractive motion',
+      className: 'prism-refraction-animation'
     }
   ];
 
