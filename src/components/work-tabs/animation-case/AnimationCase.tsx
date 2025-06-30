@@ -498,6 +498,12 @@ const AnimationCase: React.FC = () => {
       title: 'Prism Refraction',
       description: 'Light beam splits into a spectrum of colors with refractive motion',
       className: 'prism-refraction-animation'
+    },
+    {
+      id: 'magnetic-field',
+      title: 'Magnetic Field Effect',
+      description: 'Dynamic magnetic force lines with particle attraction and repulsion',
+      className: 'magnetic-field-animation'
     }
   ];
 
