@@ -504,6 +504,12 @@ const AnimationCase: React.FC = () => {
       title: 'Magnetic Field Effect',
       description: 'Dynamic magnetic force lines with particle attraction and repulsion',
       className: 'magnetic-field-animation'
+    },
+    {
+      id: 'sound-wave',
+      title: 'Sound Wave Effect',
+      description: 'Audio visualization with oscillating wave patterns and frequency response',
+      className: 'sound-wave-animation'
     }
   ];
 
