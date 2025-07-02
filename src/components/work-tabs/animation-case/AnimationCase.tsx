@@ -510,6 +510,12 @@ const AnimationCase: React.FC = () => {
       title: 'Sound Wave Effect',
       description: 'Audio visualization with oscillating wave patterns and frequency response',
       className: 'sound-wave-animation'
+    },
+    {
+      id: 'particle-swarm',
+      title: 'Particle Swarm Effect',
+      description: 'Dynamic particle system with flocking behavior and organic movement patterns',
+      className: 'particle-swarm-animation'
     }
   ];
 
