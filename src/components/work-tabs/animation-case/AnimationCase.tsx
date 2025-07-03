@@ -516,6 +516,12 @@ const AnimationCase: React.FC = () => {
       title: 'Particle Swarm Effect',
       description: 'Dynamic particle system with flocking behavior and organic movement patterns',
       className: 'particle-swarm-animation'
+    },
+    {
+      id: 'liquid-metal',
+      title: 'Liquid Metal Effect',
+      description: 'Mercury-like fluid animation with surface tension and metallic reflections',
+      className: 'liquid-metal-animation'
     }
   ];
 
