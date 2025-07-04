@@ -522,6 +522,12 @@ const AnimationCase: React.FC = () => {
       title: 'Liquid Metal Effect',
       description: 'Mercury-like fluid animation with surface tension and metallic reflections',
       className: 'liquid-metal-animation'
+    },
+    {
+      id: 'cyberpunk-grid',
+      title: 'Cyberpunk Grid Effect',
+      description: 'Futuristic neon grid with scanning lines and digital distortion',
+      className: 'cyberpunk-grid-animation'
     }
   ];
 
