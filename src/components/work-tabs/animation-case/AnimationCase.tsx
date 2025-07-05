@@ -528,6 +528,12 @@ const AnimationCase: React.FC = () => {
       title: 'Cyberpunk Grid Effect',
       description: 'Futuristic neon grid with scanning lines and digital distortion',
       className: 'cyberpunk-grid-animation'
+    },
+    {
+      id: 'dna-helix',
+      title: 'DNA Helix Effect',
+      description: 'Rotating double helix with genetic code visualization and molecular bonds',
+      className: 'dna-helix-animation'
     }
   ];
 
