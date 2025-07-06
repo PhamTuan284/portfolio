@@ -534,6 +534,12 @@ const AnimationCase: React.FC = () => {
       title: 'DNA Helix Effect',
       description: 'Rotating double helix with genetic code visualization and molecular bonds',
       className: 'dna-helix-animation'
+    },
+    {
+      id: 'origami-crane',
+      title: 'Origami Crane Effect',
+      description: 'Elegant paper crane folding and unfolding with graceful wing movements',
+      className: 'origami-crane-animation'
     }
   ];
 
