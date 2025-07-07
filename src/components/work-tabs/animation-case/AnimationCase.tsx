@@ -540,6 +540,12 @@ const AnimationCase: React.FC = () => {
       title: 'Origami Crane Effect',
       description: 'Elegant paper crane folding and unfolding with graceful wing movements',
       className: 'origami-crane-animation'
+    },
+    {
+      id: 'quantum-entanglement',
+      title: 'Quantum Entanglement Effect',
+      description: 'Interconnected particles with synchronized movements and quantum state transitions',
+      className: 'quantum-entanglement-animation'
     }
   ];
 
