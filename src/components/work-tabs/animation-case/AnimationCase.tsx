@@ -546,6 +546,12 @@ const AnimationCase: React.FC = () => {
       title: 'Quantum Entanglement Effect',
       description: 'Interconnected particles with synchronized movements and quantum state transitions',
       className: 'quantum-entanglement-animation'
+    },
+    {
+      id: 'holographic-mirror',
+      title: 'Holographic Mirror Effect',
+      description: 'Reflective surface with holographic projections and light refraction',
+      className: 'holographic-mirror-animation'
     }
   ];
 
